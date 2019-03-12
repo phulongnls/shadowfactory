@@ -1,0 +1,91 @@
+#body-wrapper {
+	background-color: #010101;
+	::-webkit-scrollbar { 
+		display: none; 
+	}
+
+}
+.about-content {	
+	.sectionTitle {
+		position: relative;
+		right: 110px;
+
+	}
+	padding: 20px 30px;
+	.textWhite {
+		color: #f1f1f1;
+		margin-top: 30px!important;
+		font-family: Gotham XLight,sans-serif;
+	}
+	.textYellow {
+		color: #ffcc04;
+		font-family: Gotham Bold,sans-serif;
+		font-weight: 700;
+	}
+	a {
+		text-decoration: none;
+	}
+	.about {
+		h3 {
+			font-size: 40px;
+		}
+		margin-bottom: 150px;
+	}
+	.service {
+		h3 {
+			font-size: 40px;
+		}
+		margin-bottom: 30px!important;
+		grid-column: container;
+
+
+	}
+	.box {
+		.textBold {
+			font-family: Gotham Bold,sans-serif;
+		}
+		.box-item {
+			position: relative;
+			bottom: 18px;
+			left: 20px;
+			h4 {
+				color: #f1f1f1;
+				font-size: 28px;
+				transition: color .25s ease;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			.is_open::after {
+				content: "\2013";
+				color: #00aeef;
+				font-size: 48px;				
+				position: absolute;
+				display: inline-block;
+				right: 40px;
+				top: -8px;
+			}
+			.is_close::after {
+				content: "+";
+				font-size: 48px;
+				color: yellow;
+				position: absolute;
+				display: inline-block;
+				right: 40px;
+				top: -8px;
+			}
+		}
+		margin-bottom: 12px;
+		display: block;
+		border: solid;
+	}
+
+}
+
+
+#body-wrapper {
+	background-color: #010101;
+	::-webkit-scrollbar { 
+		display: none; 
+	}
+
+}

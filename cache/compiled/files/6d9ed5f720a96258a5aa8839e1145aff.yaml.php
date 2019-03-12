@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/opt/lampp/htdocs/shadowfactory/user/plugins/admin/languages/ru.yaml',
-    'modified' => 1549519764,
+    'modified' => 1552374227,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Это бета-релиз! Вы используете это расширение на свой страх и риск...',

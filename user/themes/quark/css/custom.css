@@ -1,0 +1,68 @@
+#body-wrapper {
+  background-color: #010101; }
+  #body-wrapper ::-webkit-scrollbar {
+    display: none; }
+
+.about-content {
+  padding: 20px 30px; }
+  .about-content .sectionTitle {
+    position: relative;
+    right: 110px; }
+  .about-content .textWhite {
+    color: #f1f1f1;
+    margin-top: 30px !important;
+    font-family: Gotham XLight,sans-serif; }
+  .about-content .textYellow {
+    color: #ffcc04;
+    font-family: Gotham Bold,sans-serif;
+    font-weight: 700; }
+  .about-content a {
+    text-decoration: none; }
+  .about-content .about {
+    margin-bottom: 150px; }
+    .about-content .about h3 {
+      font-size: 40px; }
+  .about-content .service {
+    margin-bottom: 30px !important;
+    grid-column: container; }
+    .about-content .service h3 {
+      font-size: 40px; }
+  .about-content .box {
+    margin-bottom: 12px;
+    display: block;
+    border: solid; }
+    .about-content .box .textBold {
+      font-family: Gotham Bold,sans-serif; }
+    .about-content .box .box-item {
+      position: relative;
+      bottom: 18px;
+      left: 20px; }
+      .about-content .box .box-item h4 {
+        color: #f1f1f1;
+        font-size: 28px;
+        transition: color .25s ease;
+        font-weight: bold;
+        cursor: pointer; }
+      .about-content .box .box-item .is_open::after {
+        content: "\2013";
+        color: #00aeef;
+        font-size: 48px;
+        position: absolute;
+        display: inline-block;
+        right: 40px;
+        top: -8px; }
+      .about-content .box .box-item .is_close::after {
+        content: "+";
+        font-size: 48px;
+        color: yellow;
+        position: absolute;
+        display: inline-block;
+        right: 40px;
+        top: -8px; }
+
+#body-wrapper {
+  background-color: #010101; }
+  #body-wrapper ::-webkit-scrollbar {
+    display: none; }
+
+/*# sourceMappingURL=custom.css.map */

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/opt/lampp/htdocs/shadowfactory/system/languages/cs.yaml',
-    'modified' => 1549519764,
+    'modified' => 1552374227,
     'data' => [
         'INFLECTOR_UNCOUNTABLE' => [
             0 => 'vybavení',

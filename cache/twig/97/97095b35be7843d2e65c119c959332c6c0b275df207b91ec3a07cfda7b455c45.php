@@ -8,7 +8,7 @@ class __TwigTemplate_5e0d9b30d7064e7659d11aa960f2fc33c8843eaad27a54d92383e952ef0
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("partials/base.html.twig", "default.html.twig", 1);
+        $this->parent = $this->loadTemplate("partials/shadow.html.twig", "default.html.twig", 1);
         $this->blocks = [
             'content' => [$this, 'block_content'],
         ];
@@ -16,7 +16,7 @@ class __TwigTemplate_5e0d9b30d7064e7659d11aa960f2fc33c8843eaad27a54d92383e952ef0
 
     protected function doGetParent(array $context)
     {
-        return "partials/base.html.twig";
+        return "partials/shadow.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -59,7 +59,7 @@ class __TwigTemplate_5e0d9b30d7064e7659d11aa960f2fc33c8843eaad27a54d92383e952ef0
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends 'partials/base.html.twig' %}
+        return new Twig_Source("{% extends 'partials/shadow.html.twig' %}
 
 {% block content %}
     {{ page.content|raw }}

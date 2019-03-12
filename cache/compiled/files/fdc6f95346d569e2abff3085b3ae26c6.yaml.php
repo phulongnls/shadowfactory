@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/opt/lampp/htdocs/shadowfactory/user/plugins/admin/admin.yaml',
-    'modified' => 1549519764,
+    'modified' => 1552374227,
     'data' => [
         'enabled' => true,
         'route' => '/admin',

@@ -1,81 +1,81 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1552373797,
-    'checksum' => '2d5925f18c68e25096824ab7131d9ab0',
+    'timestamp' => 1552378196,
+    'checksum' => '0da0890e3b9da8b3e9e676dd66739494',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1552373724
+                'modified' => 1552374227
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1552373724
+                'modified' => 1552374227
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374227
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1552373724
+                'modified' => 1552374227
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1549519764
+                'modified' => 1552378196
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374227
             ],
             'security' => [
                 'file' => 'system/config/security.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374227
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374227
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374227
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374227
             ]
         ],
         'user/plugins' => [
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374228
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374228
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374228
             ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374227
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374228
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374228
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374228
             ]
         ]
     ],
@@ -776,7 +776,8 @@ return [
                 'allowed_fallback_types' => [
                     
                 ],
-                'auto_metadata_exif' => false
+                'auto_metadata_exif' => false,
+                'upload_limit' => 134217728
             ],
             'session' => [
                 'enabled' => true,
@@ -789,7 +790,7 @@ return [
                 'path' => NULL
             ],
             'gpm' => [
-                'releases' => 'stable',
+                'releases' => 'testing',
                 'proxy_url' => NULL,
                 'method' => 'auto',
                 'verify_peer' => true,

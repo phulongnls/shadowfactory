@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/opt/lampp/htdocs/shadowfactory/system/config/site.yaml',
-    'modified' => 1549519764,
+    'modified' => 1552374227,
     'data' => [
         'title' => 'Grav',
         'default_lang' => 'en',

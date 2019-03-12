@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/opt/lampp/htdocs/shadowfactory/user/plugins/admin/blueprints.yaml',
-    'modified' => 1549519764,
+    'modified' => 1552374227,
     'data' => [
         'name' => 'Admin Panel',
         'version' => '1.8.17',

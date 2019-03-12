@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/opt/lampp/htdocs/shadowfactory/user/themes/quark/languages.yaml',
-    'modified' => 1549519764,
+    'modified' => 1552374228,
     'data' => [
         'en' => [
             'THEME_QUARK' => [

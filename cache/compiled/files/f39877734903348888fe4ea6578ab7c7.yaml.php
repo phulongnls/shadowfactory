@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/opt/lampp/htdocs/shadowfactory/system/languages/ru.yaml',
-    'modified' => 1549519764,
+    'modified' => 1552374227,
     'data' => [
         'FRONTMATTER_ERROR_PAGE' => '---
 title: %1$s

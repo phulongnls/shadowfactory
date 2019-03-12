@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/opt/lampp/htdocs/shadowfactory/user/plugins/error/languages.yaml',
-    'modified' => 1549519764,
+    'modified' => 1552374228,
     'data' => [
         'en' => [
             'PLUGIN_ERROR' => [
