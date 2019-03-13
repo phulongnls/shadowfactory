@@ -1,0 +1,311 @@
+1552992860
+a:2:{s:7:"content";s:7891:"<style type="text/css">
+    body {
+        margin: 0;
+    }
+    .outer-grid {
+        display: grid;
+        grid-template-columns: [viewport-start] minmax(0,1fr) [container-start] minmax(100px,1600px) [container-end] minmax(0,1fr) [viewport-end];
+    }
+    .banner-page.work {
+        height: 70vh;
+    }
+    .banner-page video {
+        width: 100%;
+        height: 100%;
+        object-position: 50% 50%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    .banner-page .full {
+        height: 70vh;
+        width: 100%;
+        overflow: hidden;
+        background: #1d1d1d;
+        grid-column: viewport;
+    }
+    .banner-page .bg {
+        grid-column: viewport;
+        height: 100vh;
+    }
+    .list-works {
+        grid-column: container;
+        display: grid;
+        grid-gap: 24px;
+        grid-template-rows: 100px 1fr;
+    }
+    .list-works .filter {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .list-works .filter button {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        color: #656363;
+        background: transparent;
+        padding: 6px 24px;
+        cursor: pointer;
+    }
+    .list-works .filter button.active {
+        color: #ffcc04;
+    }
+</style>
+<div class="outer-grid banner-page work">
+    <div class="full">
+        <div class="bg">
+            <video autoplay="true" loop src="http://www.shadowfactory.io.s3-website.ap-southeast-1.amazonaws.com/static/SF_Web_Video-b547a86b7807f25832d44d64749b7d75.mp4"></video>
+        </div>
+    </div>
+</div>
+<div class="outer-grid">
+    <div class="list-works grid">
+        <div class="filter">
+            <button class="active">All</button>
+            <button>AR / VR</button>
+            <button>APPS</button>
+            <button>INTERACTIVE</button>
+            <button>VIDEO</button>
+        </div>
+        <div class="grid-item">
+            <ul>
+                                                                                                                        <li>object(Grav\Common\Page\Media)#176 (9) {
+  ["path":protected]=>
+  string(56) "/var/www/html/shadowfactory/user/pages/02.work/snow_surf"
+  ["standard_exif":protected]=>
+  array(4) {
+    [0]=>
+    string(8) "FileSize"
+    [1]=>
+    string(8) "MimeType"
+    [2]=>
+    string(6) "height"
+    [3]=>
+    string(5) "width"
+  }
+  ["gettersVariable":protected]=>
+  string(9) "instances"
+  ["instances":protected]=>
+  array(1) {
+    ["snowSurfCover.png"]=>
+    object(Grav\Common\Page\Medium\ImageMedium)#177 (20) {
+      ["thumbnailTypes":protected]=>
+      array(3) {
+        [0]=>
+        string(4) "page"
+        [1]=>
+        string(5) "media"
+        [2]=>
+        string(7) "default"
+      }
+      ["image":protected]=>
+      NULL
+      ["format":protected]=>
+      string(5) "guess"
+      ["quality":protected]=>
+      int(85)
+      ["default_quality":protected]=>
+      int(85)
+      ["debug_watermarked":protected]=>
+      bool(false)
+      ["sizes":protected]=>
+      string(5) "100vw"
+      ["mode":protected]=>
+      string(6) "source"
+      ["_thumbnail":protected]=>
+      NULL
+      ["thumbnailType":protected]=>
+      NULL
+      ["alternatives":protected]=>
+      array(0) {
+      }
+      ["attributes":protected]=>
+      array(0) {
+      }
+      ["styleAttributes":protected]=>
+      array(0) {
+      }
+      ["metadata":protected]=>
+      array(0) {
+      }
+      ["gettersVariable":protected]=>
+      string(5) "items"
+      ["items":protected]=>
+      array(15) {
+        ["type"]=>
+        string(5) "image"
+        ["thumb"]=>
+        string(19) "media/thumb-png.png"
+        ["mime"]=>
+        string(9) "image/png"
+        ["image"]=>
+        array(1) {
+          ["filters"]=>
+          array(1) {
+            ["default"]=>
+            array(1) {
+              [0]=>
+              string(17) "enableProgressive"
+            }
+          }
+        }
+        ["filepath"]=>
+        string(74) "/var/www/html/shadowfactory/user/pages/02.work/snow_surf/snowSurfCover.png"
+        ["filename"]=>
+        string(17) "snowSurfCover.png"
+        ["basename"]=>
+        string(13) "snowSurfCover"
+        ["extension"]=>
+        string(3) "png"
+        ["path"]=>
+        string(56) "/var/www/html/shadowfactory/user/pages/02.work/snow_surf"
+        ["modified"]=>
+        int(1552387376)
+        ["thumbnails"]=>
+        array(2) {
+          ["default"]=>
+          string(61) "/var/www/html/shadowfactory/system/images/media/thumb-png.png"
+          ["media"]=>
+          string(74) "/var/www/html/shadowfactory/user/pages/02.work/snow_surf/snowSurfCover.png"
+        }
+        ["width"]=>
+        int(1920)
+        ["height"]=>
+        int(1080)
+        ["debug"]=>
+        bool(false)
+        ["size"]=>
+        int(4418001)
+      }
+      ["blueprints":protected]=>
+      NULL
+      ["storage":protected]=>
+      NULL
+      ["nestedSeparator":protected]=>
+      string(1) "."
+      ["parsedown":protected]=>
+      NULL
+    }
+  }
+  ["images":protected]=>
+  array(1) {
+    ["snowSurfCover.png"]=>
+    object(Grav\Common\Page\Medium\ImageMedium)#177 (20) {
+      ["thumbnailTypes":protected]=>
+      array(3) {
+        [0]=>
+        string(4) "page"
+        [1]=>
+        string(5) "media"
+        [2]=>
+        string(7) "default"
+      }
+      ["image":protected]=>
+      NULL
+      ["format":protected]=>
+      string(5) "guess"
+      ["quality":protected]=>
+      int(85)
+      ["default_quality":protected]=>
+      int(85)
+      ["debug_watermarked":protected]=>
+      bool(false)
+      ["sizes":protected]=>
+      string(5) "100vw"
+      ["mode":protected]=>
+      string(6) "source"
+      ["_thumbnail":protected]=>
+      NULL
+      ["thumbnailType":protected]=>
+      NULL
+      ["alternatives":protected]=>
+      array(0) {
+      }
+      ["attributes":protected]=>
+      array(0) {
+      }
+      ["styleAttributes":protected]=>
+      array(0) {
+      }
+      ["metadata":protected]=>
+      array(0) {
+      }
+      ["gettersVariable":protected]=>
+      string(5) "items"
+      ["items":protected]=>
+      array(15) {
+        ["type"]=>
+        string(5) "image"
+        ["thumb"]=>
+        string(19) "media/thumb-png.png"
+        ["mime"]=>
+        string(9) "image/png"
+        ["image"]=>
+        array(1) {
+          ["filters"]=>
+          array(1) {
+            ["default"]=>
+            array(1) {
+              [0]=>
+              string(17) "enableProgressive"
+            }
+          }
+        }
+        ["filepath"]=>
+        string(74) "/var/www/html/shadowfactory/user/pages/02.work/snow_surf/snowSurfCover.png"
+        ["filename"]=>
+        string(17) "snowSurfCover.png"
+        ["basename"]=>
+        string(13) "snowSurfCover"
+        ["extension"]=>
+        string(3) "png"
+        ["path"]=>
+        string(56) "/var/www/html/shadowfactory/user/pages/02.work/snow_surf"
+        ["modified"]=>
+        int(1552387376)
+        ["thumbnails"]=>
+        array(2) {
+          ["default"]=>
+          string(61) "/var/www/html/shadowfactory/system/images/media/thumb-png.png"
+          ["media"]=>
+          string(74) "/var/www/html/shadowfactory/user/pages/02.work/snow_surf/snowSurfCover.png"
+        }
+        ["width"]=>
+        int(1920)
+        ["height"]=>
+        int(1080)
+        ["debug"]=>
+        bool(false)
+        ["size"]=>
+        int(4418001)
+      }
+      ["blueprints":protected]=>
+      NULL
+      ["storage":protected]=>
+      NULL
+      ["nestedSeparator":protected]=>
+      string(1) "."
+      ["parsedown":protected]=>
+      NULL
+    }
+  }
+  ["videos":protected]=>
+  array(0) {
+  }
+  ["audios":protected]=>
+  array(0) {
+  }
+  ["files":protected]=>
+  array(0) {
+  }
+  ["media_order":protected]=>
+  array(1) {
+    [0]=>
+    string(17) "snowSurfCover.png"
+  }
+}
+<img src="/var/www/html/shadowfactory/user/pages/02.work/snow_surf" alt="Snow Surf"></li>
+                            </ul>
+        </div>
+    </div>
+</div>";s:12:"content_meta";N;}

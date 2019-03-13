@@ -1,117 +1,93 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1552373797,
-    'checksum' => '2d5925f18c68e25096824ab7131d9ab0',
+    'timestamp' => 1552451902,
+    'checksum' => '8114c4f40cd575eb7401f0a7829dc32a',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1552373724
+                'modified' => 1552374244
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1552373724
+                'modified' => 1552374244
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374244
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1552373724
+                'modified' => 1552374244
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1549519764
+                'modified' => 1552451902
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374243
             ],
             'security' => [
                 'file' => 'system/config/security.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374243
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374243
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374243
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374243
             ]
         ],
         'user/plugins' => [
-            'plugins/email' => [
-                'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1549519764
-            ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1549519764
-            ],
-            'plugins/error' => [
-                'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374245
             ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374244
             ],
-            'plugins/form' => [
-                'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1549519764
+            'plugins/email' => [
+                'file' => 'user/plugins/email/email.yaml',
+                'modified' => 1552374244
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374244
+            ],
+            'plugins/taxonomylist' => [
+                'file' => 'user/plugins/taxonomylist/taxonomylist.yaml',
+                'modified' => 1552384460
+            ],
+            'plugins/form' => [
+                'file' => 'user/plugins/form/form.yaml',
+                'modified' => 1552374244
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1549519764
+                'modified' => 1552374244
+            ],
+            'plugins/error' => [
+                'file' => 'user/plugins/error/error.yaml',
+                'modified' => 1552374244
             ]
         ]
     ],
     'data' => [
         'plugins' => [
-            'email' => [
-                'enabled' => true,
-                'from' => NULL,
-                'from_name' => NULL,
-                'to' => NULL,
-                'to_name' => NULL,
-                'mailer' => [
-                    'engine' => 'sendmail',
-                    'smtp' => [
-                        'server' => 'localhost',
-                        'port' => 25,
-                        'encryption' => 'none',
-                        'user' => '',
-                        'password' => ''
-                    ],
-                    'sendmail' => [
-                        'bin' => '/usr/sbin/sendmail -bs'
-                    ]
-                ],
-                'content_type' => 'text/html',
-                'debug' => false
-            ],
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
-            ],
-            'error' => [
-                'enabled' => true,
-                'routes' => [
-                    404 => '/error'
-                ]
             ],
             'admin' => [
                 'enabled' => true,
@@ -172,6 +148,42 @@ return [
                     ]
                 ]
             ],
+            'email' => [
+                'enabled' => true,
+                'from' => NULL,
+                'from_name' => NULL,
+                'to' => NULL,
+                'to_name' => NULL,
+                'mailer' => [
+                    'engine' => 'sendmail',
+                    'smtp' => [
+                        'server' => 'localhost',
+                        'port' => 25,
+                        'encryption' => 'none',
+                        'user' => '',
+                        'password' => ''
+                    ],
+                    'sendmail' => [
+                        'bin' => '/usr/sbin/sendmail -bs'
+                    ]
+                ],
+                'content_type' => 'text/html',
+                'debug' => false
+            ],
+            'markdown-notices' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'level_classes' => [
+                    0 => 'yellow',
+                    1 => 'red',
+                    2 => 'blue',
+                    3 => 'green'
+                ]
+            ],
+            'taxonomylist' => [
+                'enabled' => true,
+                'route' => '/blog'
+            ],
             'form' => [
                 'enabled' => true,
                 'built_in_css' => true,
@@ -189,16 +201,6 @@ return [
                     'accept' => [
                         0 => 'image/*'
                     ]
-                ]
-            ],
-            'markdown-notices' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'level_classes' => [
-                    0 => 'yellow',
-                    1 => 'red',
-                    2 => 'blue',
-                    3 => 'green'
                 ]
             ],
             'login' => [
@@ -254,6 +256,12 @@ return [
                         'send_notification_email' => false,
                         'send_welcome_email' => false
                     ]
+                ]
+            ],
+            'error' => [
+                'enabled' => true,
+                'routes' => [
+                    404 => '/error'
                 ]
             ]
         ],
@@ -776,7 +784,8 @@ return [
                 'allowed_fallback_types' => [
                     
                 ],
-                'auto_metadata_exif' => false
+                'auto_metadata_exif' => false,
+                'upload_limit' => 67108864
             ],
             'session' => [
                 'enabled' => true,

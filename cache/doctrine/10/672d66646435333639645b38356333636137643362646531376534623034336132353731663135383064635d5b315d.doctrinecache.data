@@ -1,0 +1,25 @@
+1552981197
+a:2:{s:7:"content";s:579:"<style type="text/css">
+    body {
+        margin: 0;
+    }
+    .banner-page {
+        display: grid;
+    }
+    .banner-page.work {
+        height: 70vh;
+    }
+    .banner-page video {
+        width: 100%;
+        height: 100%;
+    }
+    .banner-page .bg {
+        grid-column: viewport;
+        height: 100%;
+    }
+</style>
+<div class="banner-page work">
+    <div class="bg">
+        <video autoplay="true" controls loop src="http://www.shadowfactory.io.s3-website.ap-southeast-1.amazonaws.com/static/SF_Web_Video-b547a86b7807f25832d44d64749b7d75.mp4"></video>
+    </div>
+</div>";s:12:"content_meta";N;}

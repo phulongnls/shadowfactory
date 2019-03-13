@@ -1,0 +1,2446 @@
+1553064984
+a:2:{s:7:"content";s:56439:"<style type="text/css">
+    body {
+        margin: 0;
+        background: #010101;
+    }
+    .outer-grid {
+        display: grid;
+        grid-template-columns: [viewport-start] minmax(0,1fr) [container-start] minmax(100px,1600px) [container-end] minmax(0,1fr) [viewport-end];
+    }
+    .banner-page.work {
+        height: 70vh;
+    }
+    .banner-page video {
+        width: 100%;
+        height: 100%;
+        object-position: 50% 50%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    .banner-page .full {
+        height: 70vh;
+        width: 100%;
+        overflow: hidden;
+        background: #1d1d1d;
+        grid-column: viewport;
+    }
+    .banner-page .bg {
+        grid-column: viewport;
+        height: 100vh;
+    }
+    .list-works {
+        grid-column: container;
+        display: grid;
+        grid-gap: 24px;
+        grid-template-rows: 100px 1fr;
+        margin-bottom: 30px;
+        padding-bottom: 18px;
+    }
+    .list-works .filter {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .list-works .filter button {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        color: #656363;
+        background: transparent;
+        padding: 6px 24px;
+        cursor: pointer;
+    }
+    .list-works .filter button.active {
+        color: #ffcc04;
+    }
+    .list-works .grid-item {
+        display: flex;
+    }
+    .col1 {
+        width: calc(25% - 12px);
+    }
+    .col2 {
+        width: calc(50% - 12px);
+    }
+    .col3 {
+        width: calc(75% - 12px);
+    }
+    .col4 {
+        width: 100%;
+    }
+    .row1 {
+        height: 350px;
+    }
+    .row2 {
+        height: 712px;
+    }
+    .list-works .grid-item .item {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 12px;
+    }
+    .list-works .grid-item .item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .list-works .grid-item .item.objBottom img {
+        object-position: bottom;
+    }
+    .list-works .grid-item .item .title {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        margin: 0;
+        background: rgba(0,0,0,.65);
+        transition: all .8s ease-in-out;
+    }
+    .list-works .grid-item .item .title a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: absolute;
+        padding: 12px;
+        top: 300px;
+        transition: all .25s ease-in;
+        text-decoration: none;
+        color: #f1f1f1;
+    }
+    .list-works .grid-item .item:hover .title {
+        background: linear-gradient(transparent,transparent,rgba(0,0,0,.8));
+        transition: all .8s ease-in-out;
+    }
+    .list-works .grid-item .item:hover a {
+        top: 0;
+        transition: all .25s ease-out;
+    }
+</style>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+<div class="outer-grid banner-page work">
+    <div class="full">
+        <div class="bg">
+            <video autoplay="true" loop src="http://www.shadowfactory.io.s3-website.ap-southeast-1.amazonaws.com/static/SF_Web_Video-b547a86b7807f25832d44d64749b7d75.mp4"></video>
+        </div>
+    </div>
+</div>
+<div class="outer-grid">
+    <div class="list-works grid">
+        <div class="filter">
+                                    <button class="active" data-filter="*">ALL</button>
+                            <button data-filter=".ARVR">AR / VR</button>
+                            <button data-filter=".APPS">APPS</button>
+                            <button data-filter=".INTERACTIVE">INTERACTIVE</button>
+                            <button data-filter=".VIDEO">VIDEO</button>
+                    </div>
+        <div class="grid-item">
+            <div class="grid-sizer row1 col1"></div>
+                                                                                                                                                        object(Grav\Common\Page\Page)#215 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(12) "01.snow_surf"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "15524493110d3ff312d7f45b820107663eca4adb5a"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(9) "snow_surf"
+  ["route":protected]=>
+  string(15) "/work/snow_surf"
+  ["raw_route":protected]=>
+  string(15) "/work/snow_surf"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552449311)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#220 (6) {
+    ["title"]=>
+    string(10) " Snow Surf"
+    ["media_order"]=>
+    string(17) "snowSurfCover.png"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row1 col2"
+      ["classType"]=>
+      string(9) "row1 col2"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(7) "AR / VR"
+      }
+    }
+    ["process"]=>
+    array(2) {
+      ["markdown"]=>
+      bool(true)
+      ["twig"]=>
+      bool(true)
+    }
+    ["twig_first"]=>
+    bool(true)
+  }
+  ["frontmatter":protected]=>
+  string(217) "title: ' Snow Surf'
+media_order: snowSurfCover.png
+metadata:
+    classAll: 'row1 col2'
+    classType: 'row1 col2'
+taxonomy:
+    category:
+        - 'AR / VR'
+process:
+    markdown: true
+    twig: true
+twig_first: true"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col2"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col2"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(9) "Snow Surf"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552449311)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(7) "AR / VR"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(true)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row1 col2 ARVR" data-all="row1 col2" data-type="row1 col2">
+                    <img src="/shadowfactory/user/pages/02.work/01.snow_surf/snowSurfCover.png" alt="Snow Surf">
+                    <h4 class="title"><a href="#">Snow Surf</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#191 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(16) "02.ride-the-tide"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "15524493114b07dce334e0476f86f2a9abf3e2aee8"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(13) "ride-the-tide"
+  ["route":protected]=>
+  string(19) "/work/ride-the-tide"
+  ["raw_route":protected]=>
+  string(19) "/work/ride-the-tide"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552449311)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#194 (4) {
+    ["title"]=>
+    string(13) "Ride The Tide"
+    ["media_order"]=>
+    string(20) "rideTheTideCover.png"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row1 col1"
+      ["classType"]=>
+      string(9) "row1 col1"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(7) "AR / VR"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(163) "title: 'Ride The Tide'
+media_order: rideTheTideCover.png
+metadata:
+    classAll: 'row1 col1'
+    classType: 'row1 col1'
+taxonomy:
+    category:
+        - 'AR / VR'"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col1"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col1"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(13) "Ride The Tide"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552449311)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(7) "AR / VR"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row1 col1 ARVR" data-all="row1 col1" data-type="row1 col1">
+                    <img src="/shadowfactory/user/pages/02.work/02.ride-the-tide/rideTheTideCover.png" alt="Ride The Tide">
+                    <h4 class="title"><a href="#">Ride The Tide</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#211 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(13) "03.smart-city"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "155244931160abd05e01457081d86210471d49821c"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(10) "smart-city"
+  ["route":protected]=>
+  string(16) "/work/smart-city"
+  ["raw_route":protected]=>
+  string(16) "/work/smart-city"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552449311)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#214 (4) {
+    ["title"]=>
+    string(10) "Smart City"
+    ["media_order"]=>
+    string(18) "smartCityCover.png"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row2 col1"
+      ["classType"]=>
+      string(9) "row2 col1"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(7) "AR / VR"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(158) "title: 'Smart City'
+media_order: smartCityCover.png
+metadata:
+    classAll: 'row2 col1'
+    classType: 'row2 col1'
+taxonomy:
+    category:
+        - 'AR / VR'"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col1"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col1"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(10) "Smart City"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552449311)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(7) "AR / VR"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row2 col1 ARVR" data-all="row2 col1" data-type="row2 col1">
+                    <img src="/shadowfactory/user/pages/02.work/03.smart-city/smartCityCover.png" alt="Smart City">
+                    <h4 class="title"><a href="#">Smart City</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#203 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(14) "04.studio-city"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "15524596430a9a28a7cfcfc2c837476fb94c1805c4"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(11) "studio-city"
+  ["route":protected]=>
+  string(17) "/work/studio-city"
+  ["raw_route":protected]=>
+  string(17) "/work/studio-city"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552459643)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#206 (4) {
+    ["title"]=>
+    string(11) "Studio City"
+    ["media_order"]=>
+    string(19) "studioCityCover.png"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row2 col1"
+      ["classType"]=>
+      string(9) "row1 col4"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(11) "INTERACTIVE"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(162) "title: 'Studio City'
+media_order: studioCityCover.png
+metadata:
+    classAll: 'row2 col1'
+    classType: 'row1 col4'
+taxonomy:
+    category:
+        - INTERACTIVE"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col1"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col4"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(11) "Studio City"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552459643)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(11) "INTERACTIVE"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row2 col1 INTERACTIVE" data-all="row2 col1" data-type="row1 col4">
+                    <img src="/shadowfactory/user/pages/02.work/04.studio-city/studioCityCover.png" alt="Studio City">
+                    <h4 class="title"><a href="#">Studio City</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#199 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(11) "05.sinewave"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "1552459071bc7c10acf856dff631dd6b82ae46e6b2"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(8) "sinewave"
+  ["route":protected]=>
+  string(14) "/work/sinewave"
+  ["raw_route":protected]=>
+  string(14) "/work/sinewave"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552459071)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#202 (4) {
+    ["title"]=>
+    string(8) "Sinewave"
+    ["media_order"]=>
+    string(17) "sinewaveCover.png"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row2 col2"
+      ["classType"]=>
+      string(9) "row2 col1"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(7) "AR / VR"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(153) "title: Sinewave
+media_order: sinewaveCover.png
+metadata:
+    classAll: 'row2 col2'
+    classType: 'row2 col1'
+taxonomy:
+    category:
+        - 'AR / VR'"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col2"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col1"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(8) "Sinewave"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552459071)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(7) "AR / VR"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row2 col2 ARVR" data-all="row2 col2" data-type="row2 col1">
+                    <img src="/shadowfactory/user/pages/02.work/05.sinewave/sinewaveCover.png" alt="Sinewave">
+                    <h4 class="title"><a href="#">Sinewave</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#195 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(8) "06.forza"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "1552459555463856b54d01b2c033b6843478e96e3d"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(5) "forza"
+  ["route":protected]=>
+  string(11) "/work/forza"
+  ["raw_route":protected]=>
+  string(11) "/work/forza"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552459555)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#198 (4) {
+    ["title"]=>
+    string(5) "Forza"
+    ["media_order"]=>
+    string(14) "forzaCover.jpg"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row1 col1"
+      ["classType"]=>
+      string(9) "row1 col2"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(4) "APPS"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(142) "title: Forza
+media_order: forzaCover.jpg
+metadata:
+    classAll: 'row1 col1'
+    classType: 'row1 col2'
+taxonomy:
+    category:
+        - APPS"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col1"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col2"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(5) "Forza"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552459555)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(4) "APPS"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row1 col1 APPS" data-all="row1 col1" data-type="row1 col2">
+                    <img src="/shadowfactory/user/pages/02.work/06.forza/forzaCover.jpg" alt="Forza">
+                    <h4 class="title"><a href="#">Forza</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#223 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(15) "07.stupid-cupid"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "15524594888fa733a2e20e8b1ac28804249f650e04"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(12) "stupid-cupid"
+  ["route":protected]=>
+  string(18) "/work/stupid-cupid"
+  ["raw_route":protected]=>
+  string(18) "/work/stupid-cupid"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552459488)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#226 (4) {
+    ["title"]=>
+    string(12) "Stupid Cupid"
+    ["media_order"]=>
+    string(20) "stupidCupidCover.png"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row1 col2"
+      ["classType"]=>
+      string(9) "row2 col2"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(7) "AR / VR"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(162) "title: 'Stupid Cupid'
+media_order: stupidCupidCover.png
+metadata:
+    classAll: 'row1 col2'
+    classType: 'row2 col2'
+taxonomy:
+    category:
+        - 'AR / VR'"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col2"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col2"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(12) "Stupid Cupid"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552459488)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(7) "AR / VR"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row1 col2 ARVR" data-all="row1 col2" data-type="row2 col2">
+                    <img src="/shadowfactory/user/pages/02.work/07.stupid-cupid/stupidCupidCover.png" alt="Stupid Cupid">
+                    <h4 class="title"><a href="#">Stupid Cupid</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#187 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(15) "08.rugby-sevens"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "1552459568cfc2f5e909711e86ec60cd23e20619ea"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(12) "rugby-sevens"
+  ["route":protected]=>
+  string(18) "/work/rugby-sevens"
+  ["raw_route":protected]=>
+  string(18) "/work/rugby-sevens"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552459568)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#190 (4) {
+    ["title"]=>
+    string(12) "Rugby Sevens"
+    ["media_order"]=>
+    string(20) "rugbySevensCover.jpg"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row1 col1"
+      ["classType"]=>
+      string(9) "row2 col2"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(4) "APPS"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(157) "title: 'Rugby Sevens'
+media_order: rugbySevensCover.jpg
+metadata:
+    classAll: 'row1 col1'
+    classType: 'row2 col2'
+taxonomy:
+    category:
+        - APPS"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col1"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col2"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(12) "Rugby Sevens"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552459568)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(4) "APPS"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row1 col1 APPS" data-all="row1 col1" data-type="row2 col2">
+                    <img src="/shadowfactory/user/pages/02.work/08.rugby-sevens/rugbySevensCover.jpg" alt="Rugby Sevens">
+                    <h4 class="title"><a href="#">Rugby Sevens</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#219 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(21) "09.deliveroo-kitchens"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "15524598702055a3d20cc1d000e66b913a28f99413"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(18) "deliveroo-kitchens"
+  ["route":protected]=>
+  string(24) "/work/deliveroo-kitchens"
+  ["raw_route":protected]=>
+  string(24) "/work/deliveroo-kitchens"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552459870)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#222 (4) {
+    ["title"]=>
+    string(18) "Deliveroo Kitchens"
+    ["media_order"]=>
+    string(26) "deliverooKitchensCover.png"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row2 col1"
+      ["classType"]=>
+      string(19) "row1 col4 objBottom"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(5) "VIDEO"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(180) "title: 'Deliveroo Kitchens'
+media_order: deliverooKitchensCover.png
+metadata:
+    classAll: 'row2 col1'
+    classType: 'row1 col4 objBottom'
+taxonomy:
+    category:
+        - VIDEO"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col1"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(19) "row1 col4 objBottom"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(18) "Deliveroo Kitchens"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552459870)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(5) "VIDEO"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row2 col1 VIDEO" data-all="row2 col1" data-type="row1 col4 objBottom">
+                    <img src="/shadowfactory/user/pages/02.work/09.deliveroo-kitchens/deliverooKitchensCover.png" alt="Deliveroo Kitchens">
+                    <h4 class="title"><a href="#">Deliveroo Kitchens</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#207 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(14) "10.centerstage"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "155245958779813dbabf846f82065f56ee5b91b3c5"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(11) "centerstage"
+  ["route":protected]=>
+  string(17) "/work/centerstage"
+  ["raw_route":protected]=>
+  string(17) "/work/centerstage"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552459587)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#210 (4) {
+    ["title"]=>
+    string(11) "Centerstage"
+    ["media_order"]=>
+    string(20) "centerstageCover.jpg"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row2 col1"
+      ["classType"]=>
+      string(9) "row1 col1"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(4) "APPS"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(154) "title: Centerstage
+media_order: centerstageCover.jpg
+metadata:
+    classAll: 'row2 col1'
+    classType: 'row1 col1'
+taxonomy:
+    category:
+        - APPS"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col1"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col1"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(11) "Centerstage"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552459587)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(4) "APPS"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row2 col1 APPS" data-all="row2 col1" data-type="row1 col1">
+                    <img src="/shadowfactory/user/pages/02.work/10.centerstage/centerstageCover.jpg" alt="Centerstage">
+                    <h4 class="title"><a href="#">Centerstage</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#179 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(11) "11.sekkisei"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "155245961745bfb00153e48aa6c41c7300a0356eb8"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(8) "sekkisei"
+  ["route":protected]=>
+  string(14) "/work/sekkisei"
+  ["raw_route":protected]=>
+  string(14) "/work/sekkisei"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552459617)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#182 (4) {
+    ["title"]=>
+    string(8) "Sekkisei"
+    ["media_order"]=>
+    string(17) "sekkiseiCover.png"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row2 col2"
+      ["classType"]=>
+      string(9) "row1 col1"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(4) "APPS"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(148) "title: Sekkisei
+media_order: sekkiseiCover.png
+metadata:
+    classAll: 'row2 col2'
+    classType: 'row1 col1'
+taxonomy:
+    category:
+        - APPS"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row2 col2"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col1"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(8) "Sekkisei"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552459617)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(4) "APPS"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row2 col2 APPS" data-all="row2 col2" data-type="row1 col1">
+                    <img src="/shadowfactory/user/pages/02.work/11.sekkisei/sekkiseiCover.png" alt="Sekkisei">
+                    <h4 class="title"><a href="#">Sekkisei</a></h4>
+                </div>
+                            object(Grav\Common\Page\Page)#183 (57) {
+  ["name":protected]=>
+  string(7) "work.md"
+  ["folder":protected]=>
+  string(10) "12.grabbag"
+  ["path":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["extension":protected]=>
+  string(3) ".md"
+  ["url_extension":protected]=>
+  string(0) ""
+  ["id":protected]=>
+  string(42) "15524498988cf5026328283cb162fbbab51c9071df"
+  ["parent":protected]=>
+  string(46) "/var/www/html/shadowfactory/user/pages/02.work"
+  ["template":protected]=>
+  string(4) "work"
+  ["expires":protected]=>
+  NULL
+  ["cache_control":protected]=>
+  NULL
+  ["visible":protected]=>
+  bool(true)
+  ["published":protected]=>
+  bool(true)
+  ["publish_date":protected]=>
+  NULL
+  ["unpublish_date":protected]=>
+  NULL
+  ["slug":protected]=>
+  string(7) "grabbag"
+  ["route":protected]=>
+  string(13) "/work/grabbag"
+  ["raw_route":protected]=>
+  string(13) "/work/grabbag"
+  ["url":protected]=>
+  NULL
+  ["routes":protected]=>
+  NULL
+  ["routable":protected]=>
+  bool(true)
+  ["modified":protected]=>
+  int(1552449898)
+  ["redirect":protected]=>
+  NULL
+  ["external_url":protected]=>
+  NULL
+  ["items":protected]=>
+  NULL
+  ["header":protected]=>
+  object(stdClass)#186 (4) {
+    ["title"]=>
+    string(7) "GrabBag"
+    ["media_order"]=>
+    string(16) "grabBagCover.png"
+    ["metadata"]=>
+    array(2) {
+      ["classAll"]=>
+      string(9) "row1 col1"
+      ["classType"]=>
+      string(9) "row1 col1"
+    }
+    ["taxonomy"]=>
+    array(1) {
+      ["category"]=>
+      array(1) {
+        [0]=>
+        string(7) "AR / VR"
+      }
+    }
+  }
+  ["frontmatter":protected]=>
+  string(151) "title: GrabBag
+media_order: grabBagCover.png
+metadata:
+    classAll: 'row1 col1'
+    classType: 'row1 col1'
+taxonomy:
+    category:
+        - 'AR / VR'"
+  ["language":protected]=>
+  NULL
+  ["content":protected]=>
+  NULL
+  ["content_meta":protected]=>
+  NULL
+  ["summary":protected]=>
+  NULL
+  ["raw_content":protected]=>
+  string(0) ""
+  ["pagination":protected]=>
+  NULL
+  ["metadata":protected]=>
+  array(4) {
+    ["generator"]=>
+    array(2) {
+      ["content"]=>
+      string(7) "GravCMS"
+      ["name"]=>
+      string(9) "generator"
+    }
+    ["description"]=>
+    array(2) {
+      ["content"]=>
+      string(63) "Grav is an easy to use, yet powerful, open source flat-file CMS"
+      ["name"]=>
+      string(11) "description"
+    }
+    ["classall"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col1"
+      ["name"]=>
+      string(8) "classall"
+    }
+    ["classtype"]=>
+    array(2) {
+      ["content"]=>
+      string(9) "row1 col1"
+      ["name"]=>
+      string(9) "classtype"
+    }
+  }
+  ["title":protected]=>
+  string(7) "GrabBag"
+  ["max_count":protected]=>
+  NULL
+  ["menu":protected]=>
+  NULL
+  ["date":protected]=>
+  int(1552449898)
+  ["dateformat":protected]=>
+  NULL
+  ["taxonomy":protected]=>
+  array(1) {
+    ["category"]=>
+    array(1) {
+      [0]=>
+      string(7) "AR / VR"
+    }
+  }
+  ["order_by":protected]=>
+  string(7) "default"
+  ["order_dir":protected]=>
+  string(3) "asc"
+  ["order_manual":protected]=>
+  NULL
+  ["modular":protected]=>
+  NULL
+  ["modular_twig":protected]=>
+  bool(false)
+  ["process":protected]=>
+  array(2) {
+    ["markdown"]=>
+    bool(true)
+    ["twig"]=>
+    bool(false)
+  }
+  ["summary_size":protected]=>
+  NULL
+  ["markdown_extra":protected]=>
+  NULL
+  ["etag":protected]=>
+  NULL
+  ["last_modified":protected]=>
+  NULL
+  ["home_route":protected]=>
+  string(5) "/home"
+  ["hide_home_route":protected]=>
+  bool(false)
+  ["ssl":protected]=>
+  NULL
+  ["template_format":protected]=>
+  NULL
+  ["debugger":protected]=>
+  NULL
+  ["_original":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["_action":"Grav\Common\Page\Page":private]=>
+  NULL
+  ["media":protected]=>
+  NULL
+}
+
+                                                                                                                                        <div class="item row1 col1 ARVR" data-all="row1 col1" data-type="row1 col1">
+                    <img src="/shadowfactory/user/pages/02.work/12.grabbag/grabBagCover.png" alt="GrabBag">
+                    <h4 class="title"><a href="#">GrabBag</a></h4>
+                </div>
+                    </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.list-works .grid-item').isotope({
+        itemSelector: '.item',
+        layoutMode: 'masonry',
+        percentPosition: true,
+        masonry: {
+            columnWidth: '.grid-sizer',
+            gutter: 12
+        }
+    });
+
+    $('.list-works .filter').on( 'click', 'button', function() {
+        if (!$(this).hasClass('active')) {
+            $('.list-works .filter button').removeClass('active');
+            $(this).addClass('active');
+            var filterValue = $( this ).attr('data-filter');
+            if (filterValue == '*') {
+                $('.list-works .grid-item .item').each(function(e) {
+                    var classAll = $(this).data('all');
+                    var classType = $(this).data('type');
+                    $(this).removeClass(classType);
+                    $(this).addClass(classAll);
+                });
+            } else {
+                $('.list-works .grid-item .item').each(function(e) {
+                    var classAll = $(this).data('all');
+                    var classType = $(this).data('type');
+                    $(this).removeClass(classAll);
+                    $(this).addClass(classType);
+                });
+            }
+            $('.list-works .grid-item').isotope({ filter: filterValue });
+        }
+    });
+</script>";s:12:"content_meta";N;}
