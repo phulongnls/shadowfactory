@@ -1,0 +1,27 @@
+1553067351
+a:2:{s:7:"content";s:860:"<div id="content-home">
+
+    <div class="our-work-section">
+        <div class="grid-our-work">
+            <div class="grid-item row1 col2"></div>
+            <div class="grid-item row1 col1"></div>
+            <div class="grid-item row2 col1"></div>
+            <div class="grid-item row2 col1"></div>
+            <div class="grid-item row2 col2"></div>
+            <div class="grid-item row1 col1"></div>
+
+        </div>
+    </div>
+
+    <div class="clients-partners">
+        <div class="grid-clients-partners">
+            <div class="grid-item row1 col1"></div>
+            <div class="grid-item row1 col1"></div>
+            <div class="grid-item row1 col1"></div>
+            <div class="grid-item row1 col1"></div>
+            <div class="grid-item row1 col1"></div>
+            <div class="grid-item row1 col1"></div>
+
+        </div>
+    </div>
+</div>";s:12:"content_meta";N;}
