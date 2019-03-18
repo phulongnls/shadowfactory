@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/html/shadowfactory/system/config/security.yaml',
-    'modified' => 1552374243,
+    'modified' => 1552889489,
     'data' => [
         'xss_whitelist' => [
             0 => 'admin.super'

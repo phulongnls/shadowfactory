@@ -1,0 +1,139 @@
+{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
+{% set grid_size = theme_var('grid-size') %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
+        {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
+        {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
+        {% do assets.addCss('theme://css-compiled/theme'~compress) %}
+        {% do assets.addCss('theme://css/custom.css') %}
+        {% do assets.addCss('theme://css/line-awesome.min.css') %}
+    {% endblock %}
+    {{ assets.css()|raw }}
+
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 101) %}
+        {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+    {% endblock %}
+    {{ assets.js()|raw }}
+
+{% endblock head %}
+</head>
+
+<body>
+<div class="page-wrapper" style="background: #{{ page.metadata['background']['content'] }};">
+{% block banner %}
+    {% for module in page.collection() if module.template == 'modular/banner' %}
+        {{ module.content|raw }}
+    {% endfor %}
+{% endblock %}
+
+<div id="start">
+
+{% block info %}
+    {% for module in page.collection() if module.template == 'modular/info' %}
+        {{ module.content|raw }}
+    {% endfor %}
+{% endblock %}
+
+<div class="work-content">
+    {% block content %}
+        {{ page.content|raw }}
+    {% endblock %}
+</div>
+
+{% block slider %}
+    {% for module in page.collection() if module.template == 'modular/slider' %}
+        {{ module.content|raw }}
+    {% endfor %}
+{% endblock %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style type="text/css">
+    .container {
+        max-width: 1630px;
+    }
+    .work-link {
+        padding: 30px 24px;
+    }
+    .work-link a {
+        padding-bottom: 3px;
+        margin-right: 10px;
+        margin-bottom: 1.45rem;
+        font-size: 18px;
+        line-height: 32px;
+        text-decoration: none;
+    }
+    .work-link a:after {
+        content: "";
+        display: block;
+        margin: auto;
+        height: 1px;
+        width: 0;
+        background: transparent;
+        transition: width .25s ease,background-color .25s ease;
+    }
+    .work-link a:hover:after {
+        width: 100%;
+        background: #ffcc04;
+    }
+    .work-link .more-work {
+        color: #00aeef;
+    }
+    .work-link .next-work {
+        color: #f1f1f1;
+    }
+    .svg-inline--fa.fa-w-10 {
+        width: 0.625em;
+        vertical-align: -0.125em;
+    }
+    .next-work svg {
+        color: #ffcc04;
+    }
+</style>
+
+<div class="container">
+    <div class="work-link">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <a class="float-left more-work" href="{{ page.parent.url }}">
+                    <svg aria-hidden="true" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                     More Work
+                </a>
+                {% if page.isLast %}
+                    {% set nextUrl = (page.parent.collection()|first).url %}
+                {% else %}
+                    {% set nextUrl = page.prevSibling.url %}
+                {% endif %}
+                <a class="float-right next-work" href="{{ nextUrl }}">
+                    <svg aria-hidden="true" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                     Next Project
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+

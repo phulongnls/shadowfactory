@@ -1,0 +1,42 @@
+title: 'Work Info'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        buttons:
+          type: tab
+          title: 'Work Info'
+          fields:
+            header.info_title:
+              type: text
+              label: Title
+              markdown: true
+            header.info_client:
+              type: text
+              label: Client
+              markdown: true
+            header.info_type:
+              type: text
+              label: Type
+              markdown: true
+            header.info_completion:
+              type: datetime
+              label: Completion
+              markdown: true
+              format: M Y
+            header.info_description:
+              type: textarea
+              label: Description
+              markdown: true
+            header.info_image:
+              type: filepicker
+              label: Image
+              markdown: true
+            header.info_media:
+              type: filepicker
+              label: Video
+              markdown: true
+
+

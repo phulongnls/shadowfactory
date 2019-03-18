@@ -1,9 +1,16 @@
 ---
 title: Work
+media_order: SF_Web_Video-fe6432fe6df30c2cf26cf8f68bc9b503.mp4
 process:
     markdown: true
     twig: true
+twig_first: true
 template: work
+content:
+    items: '@self.children'
+    order:
+        by: folder
+        dir: asc
 ---
 
 <style type="text/css">
@@ -56,6 +63,7 @@ template: work
 		background: transparent;
 		padding: 6px 24px;
 		cursor: pointer;
+		text-transform: uppercase;
 	}
 	.list-works .filter button.active {
 		color: #ffcc04;
@@ -125,31 +133,35 @@ template: work
 	    transition: all .25s ease-out;
     }
 </style>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+
+{% set video = page.media.videos|first %}
 <div class="outer-grid banner-page work">
 	<div class="full">
+		{% if video.url %}
 		<div class="bg">
-			<video autoplay="true" loop src="http://www.shadowfactory.io.s3-website.ap-southeast-1.amazonaws.com/static/SF_Web_Video-b547a86b7807f25832d44d64749b7d75.mp4"></video>
+			<video autoplay="true" loop src="{{ video.url }}"></video>
 		</div>
+		{% endif %}
 	</div>
 </div>
+{% if page.collection() %}
 <div class="outer-grid">
 	<div class="list-works grid">
 		<div class="filter">
-			{% set listWorks = [] %}
-			{% set works = taxonomylist.get()['category'] %}
+			{% set works = taxonomylist.get()['work'] %}
 			<button class="active" data-filter="*">ALL</button>
 			{% for key, item in works %}
 				<button data-filter=".{{ key|camelize }}">{{ key }}</button>
 			{% endfor %}
 		</div>
 		<div class="grid-item">
-			<div class="grid-sizer row1 col1"></div>
-			{% for key, item in works %}
-				{% set listWorks = listWorks|merge([key]) %}
-			{% endfor %}
-			{% for work in taxonomy.findTaxonomy({'category':listWorks}, 'or').order('folder','asc') %}
-				{% set image = work.header.media_order|split(',') %}
+			<div class="grid-sizer row1 col1"></div> 
+			{% for work in page.collection() %}
+				{% set image =  work.media.images|first  %}
+				{% set image = image.url %}
 				{% if (work.metadata['classall']['content']) %}
 					{% set classSize = work.metadata['classall']['content'] %}
 				{% else %}
@@ -160,23 +172,25 @@ template: work
 				{% else %}
 					{% set classSize1 = 'row1 col1' %}
 				{% endif %}
-				<div class="item {{ classSize }} {{ work.taxonomy['category'][0]|camelize }}" data-all="{{ classSize }}" data-type="{{ classSize1 }}">
-				    <img src="{{ work.media[image[0]].url }}" alt="{{ work.title }}">
-				    <h4 class="title"><a href="{{ base_url_absolute }}{{work.route}}">{{ work.title }}</a></h4>
+				<div class="item {{ classSize }} {{ work.taxonomy['work'][0]|camelize }}" data-all="{{ classSize }}" data-type="{{ classSize1 }}">
+				    <img class="lazy" data-src="{{ image }}" alt="{{ work.title }}" style="display: none;" data-srcset="{{ image }} 1200w, {{ image }} 1024w, {{ image }} 969w, {{ image }} 768w, {{ image }} 640w, {{ image }} 480w, {{ image }} 320w" data-sizes="auto">
+				    <h4 class="title"><a href="{{ work.url }}">{{ work.title }}</a></h4>
 				</div>
 			{% endfor %}
 		</div>
 	</div>
 </div>
+{% endif %}
 <script type="text/javascript">
-	$('.list-works .grid-item').isotope({
-		itemSelector: '.item',
-		layoutMode: 'masonry',
-		percentPosition: true,
-		masonry: {
-	    	columnWidth: '.grid-sizer',
-	    	gutter: 12
-	  	}
+	$('.lazy').Lazy();
+	var $grid = $('.list-works .grid-item').isotope({
+	  		itemSelector: '.item',
+	  		layoutMode: 'masonry',
+	  		percentPosition: true,
+	  		masonry: {
+	  	    	columnWidth: '.grid-sizer',
+	  	    	gutter: 12
+	  	  	}
 	});
 
 	$('.list-works .filter').on( 'click', 'button', function() {
@@ -199,7 +213,9 @@ template: work
 		  			$(this).addClass(classType);
 		  		});
 		  	}
-		  	$('.list-works .grid-item').isotope({ filter: filterValue });
+		  	$grid.imagesLoaded().progress( function() {
+		  		$grid.isotope({ filter: filterValue });
+		  	});
 		}
 	});
 </script>

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/html/shadowfactory/user/plugins/form/languages.yaml',
-    'modified' => 1552374244,
+    'modified' => 1552886151,
     'data' => [
         'en' => [
             'PLUGIN_FORM' => [

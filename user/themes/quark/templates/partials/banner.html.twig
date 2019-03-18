@@ -1,0 +1,133 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<style type="text/css">
+	.outer-grid {
+		display: grid;
+		grid-template-columns: [viewport-start] minmax(0,1fr) [container-start] minmax(100px,1600px) [container-end] minmax(0,1fr) [viewport-end];
+	}
+	.outer-grid .full {
+		height: 100vh;
+		width: 100%;
+	    overflow: hidden;
+	    background: #1d1d1d;
+	    grid-column: viewport;
+	    display: inherit;
+	    position: relative;
+	}
+	.outer-grid .full .bg {
+		grid-column: viewport;
+	    overflow: hidden;
+	}
+	.outer-grid .full .bg img {
+		width: 100%;
+		height: 100%;
+		object-position: 50% 50%;
+		object-fit: cover;
+	}
+	.banner-overlay {
+		grid-column: viewport;
+	    background: rgba(0,0,0,.3);
+	    position: absolute;
+	    padding: 12px;
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
+	}
+	.banner-overlay h1 {
+		font-size: 100px;
+		line-height: 128px;
+		color: #f1f1f1;
+		margin: 0;
+		font-weight: 700;
+	}
+	.banner-overlay p {
+		color: #f1f1f1;
+		font-size: 18px;
+		line-height: 32px;
+		margin-bottom: 1.45rem;
+	}
+	.banner-overlay a {
+		text-decoration: none;
+	    border: thin solid #ffcc04;
+	    color: #ffcc04;
+	    transition: all .5s ease;
+        padding: 6px 24px;
+        font-size: 18px;
+        line-height: 32px;
+	}
+	.banner-overlay a:hover {
+		background: #ffcc04;
+		color: #010101;
+		text-decoration: none;
+	}
+	.banner-scroll {
+		cursor: pointer;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		-webkit-transform: translateX(-50%);
+		   -moz-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		     -o-transform: translateX(-50%);
+		        transform: translateX(-50%);
+	}
+	.banner-scroll p {
+		text-align: center;
+		margin-bottom: 12px;
+		font-size: 12px;
+		color: #f1f1f1;
+	}
+	.banner-scroll .scroll-line {
+		width: 1px;
+		height: 3vh;
+		margin: auto;
+		position: relative;
+		overflow: hidden;
+	}
+	.banner-scroll .scroll-line .vertical-line {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: grey;
+		border: thin solid #f1f1f1;
+	}
+</style>
+
+<div class="outer-grid banner-page work">
+	<div class="full">
+		<div class="bg">
+			{% if banner_image %}
+				<img class="lazy" src="{{ banner_image.url }}" srcset="{{ banner_image.url }} 1200w, {{ banner_image.url }} 1024w, {{ banner_image.url }} 969w, {{ banner_image.url }} 768w, {{ banner_image.url }} 640w, {{ banner_image.url }} 480w, {{ banner_image.url }} 320w" sizes="auto" alt="{{ page.parent.title }}">
+			{% endif %}
+		</div>
+		<div class="banner-overlay">
+			{% if page.parent.title %}
+				<h1>{{ page.parent.title }}</h1>
+			{% endif %}
+			{% if banner_description %}
+				<p>{{ banner_description }}</p>
+			{% endif %}
+			{% if page.parent.taxonomy['work'][0] %}
+				<a href="{{ page.parent.parent.url }}">{{ page.parent.taxonomy['work'][0] }}</a>
+			{% endif %}
+		</div>
+		<div class="banner-scroll">
+			<p>SCROLL</p>
+			<div class="scroll-line">
+				<div class="vertical-line"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('.lazy').Lazy();
+	$('.banner-scroll').click(function(){
+        var start_y = $('#start').position().top;
+        var header_offset = 0;
+        window.scroll({ top: start_y - header_offset, left: 0, behavior: 'smooth' });
+        return false;
+    });
+</script>

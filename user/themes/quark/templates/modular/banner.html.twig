@@ -1,0 +1,5 @@
+{% set grid_size = theme_var('grid-size') %}
+{% set banner_image = page.header.banner_image ? page.media[page.header.banner_image] : page.media.images|first %}
+{% set banner_description = page.header.banner_description %}
+
+{% include 'partials/banner.html.twig' %}
