@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/html/shadowfactory/system/config/site.yaml',
-    'modified' => 1552889489,
+    'modified' => 1552891253,
     'data' => [
         'title' => 'Grav',
         'default_lang' => 'en',

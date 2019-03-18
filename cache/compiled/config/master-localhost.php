@@ -1,13 +1,17 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1552890124,
-    'checksum' => 'f69c8ee36a334c6926cf6aa6aaed0dd5',
+    'timestamp' => 1552891264,
+    'checksum' => '5cdbb1aef75f8c435d3d2d223eeccbc1',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1552886147
+            ],
+            'plugins/editable-contenttools' => [
+                'file' => 'user/config/plugins/editable-contenttools.yaml',
+                'modified' => 1552890717
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -15,7 +19,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1552886147
+                'modified' => 1552891257
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -23,7 +27,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1552888166
+                'modified' => 1552891263
             ]
         ],
         'system/config' => [
@@ -37,7 +41,7 @@ return [
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1552889489
+                'modified' => 1552891253
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
@@ -45,7 +49,7 @@ return [
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1552889489
+                'modified' => 1552891232
             ]
         ],
         'user/plugins' => [
@@ -263,6 +267,11 @@ return [
                 'routes' => [
                     404 => '/error'
                 ]
+            ],
+            'editable-contenttools' => [
+                'enabled' => true,
+                'git-sync' => true,
+                'git-sync-mode' => 'foreground'
             ]
         ],
         'media' => [
@@ -579,7 +588,8 @@ return [
             ],
             'taxonomies' => [
                 0 => 'category',
-                1 => 'tag'
+                1 => 'tag',
+                2 => 'work'
             ],
             'metadata' => [
                 'description' => 'Grav is an easy to use, yet powerful, open source flat-file CMS'
@@ -673,7 +683,7 @@ return [
                     'twig' => true
                 ],
                 'markdown' => [
-                    'extra' => false,
+                    'extra' => true,
                     'auto_line_breaks' => false,
                     'auto_url_links' => false,
                     'escape_markup' => false,
@@ -698,7 +708,7 @@ return [
                 'etag' => false,
                 'vary_accept_encoding' => false,
                 'redirect_default_route' => false,
-                'redirect_default_code' => 302,
+                'redirect_default_code' => '302',
                 'redirect_trailing_slash' => true,
                 'ignore_files' => [
                     0 => '.DS_Store'
@@ -759,7 +769,7 @@ return [
                 ]
             ],
             'errors' => [
-                'display' => true,
+                'display' => 1,
                 'log' => true
             ],
             'debugger' => [

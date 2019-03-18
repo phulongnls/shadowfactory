@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1552890124,
-    'checksum' => 'ec0f7d38df65d2b649fe30a22bf18be1',
+    'timestamp' => 1552891009,
+    'checksum' => '737dd9c0f0cd3efb27532b27f96eb901',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
@@ -27,6 +27,10 @@ return [
             ]
         ],
         'user/plugins' => [
+            'plugins/gffi' => [
+                'file' => 'user/plugins/gffi/blueprints.yaml',
+                'modified' => 1552890721
+            ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
                 'modified' => 1552886151
@@ -1948,7 +1952,7 @@ return [
                 'name' => 'system.advanced',
                 'validation' => 'loose'
             ],
-            'plugins.problems' => [
+            'plugins.gffi' => [
                 'type' => '_root',
                 'form_field' => false,
                 'form' => [
@@ -1959,6 +1963,28 @@ return [
                 'type' => '_parent',
                 'name' => 'plugins',
                 'form_field' => false
+            ],
+            'plugins.gffi.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.gffi.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.problems' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
             ],
             'plugins.problems.enabled' => [
                 'type' => 'toggle',
@@ -3864,6 +3890,9 @@ return [
                 ]
             ],
             'plugins' => [
+                'gffi' => [
+                    'enabled' => 'plugins.gffi.enabled'
+                ],
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',
                     'built_in_css' => 'plugins.problems.built_in_css'

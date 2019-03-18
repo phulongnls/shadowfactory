@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/html/shadowfactory/user/accounts/admin.yaml',
-    'modified' => 1552374244,
+    'modified' => 1552886147,
     'data' => [
         'email' => 'lho@nlstech.net',
         'fullname' => 'Admin',
