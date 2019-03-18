@@ -1,6 +1,4 @@
-{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
-{% set grid_size = theme_var('grid-size') %}
-{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
@@ -32,7 +30,9 @@
   
     {% block stylesheets %}
    
-        {% do assets.addCss('theme://css/shadow_factory.css') %}
+        {% do assets.addCss('theme://css/shadow_factory_home.css') %}
+        {% do assets.addCss('theme://css/shadow_factory_blog.css') %}
+        {% do assets.addCss('theme://css/shadow_factory_general.css') %}
     {% endblock %}
     {{ assets.css()|raw }}
 
@@ -55,7 +55,7 @@
         
                 <div class="logo">
                    
-                    <img src="{{ url('theme://assets/afereri.jpg') }}" alt="Smiley face" height="42" width="200">
+                    <img src="{{ url('theme://assets/afereri.jpg') }}" alt="Smiley face" height="47.72" width="133.18">
                 </div>
 
                 <div class="desktop-menu">
@@ -103,13 +103,14 @@
                    
 
                     <form class="form_footer" action="https://shadowfactory.us18.list-manage.com/subscribe/post" method="POST" novalidate="">
-                        <p>Email</p>
-                        <input class="input_footer" type="email" name="EMAIL" id="" value="" autocapitalize="off" autocorrect="off">
-                        <p>Name</p>
-                        <input class="input_footer" type="text" name="NAME" id="" value="">
-                        <p>Message</p>
-                        <textarea class="input_footer" type="text" name="MESSAGE" id="" row="4"></textarea>
-                        <input id="submit-footer-form" type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="box p1 borderYellow">
+                        <h6 class="label_form black">Email</h6>
+                        <input class="input-form" type="email" name="EMAIL" id="" value="" autocapitalize="off" autocorrect="off">
+                        <h6 class="label_form black">Name</h6>
+                        <input class="input-form" type="text" name="NAME" id="" value="">
+                        <h6 class="label-form black">Message</h6>
+                        <textarea class="input-form" type="text" name="MESSAGE" id="" row="4"></textarea>
+
+                        <input id="submit-footer-form" type="submit" value="submit" name="subscribe" class="button-factory button-yellow">
 
 
                     </form>
@@ -170,11 +171,6 @@
 
 <script type="text/javascript">
 
-
-  
-
-
-
     $(document).ready(function() {
   
        $( ".footer-title" ).click(function() {
@@ -182,9 +178,9 @@
             // console.log(footer); 
             var height_footer = footer.height();
             // console.log(height_footer);
-            if(height_footer == 600){
+            if(height_footer == 1003){
                 footer.animate({
-                    height: 168
+                    height: 270
                 }, 500, "linear" , function() {
                 // Animation complete.
                 
@@ -197,7 +193,7 @@
 
             }else{
              footer.animate({
-                height: 600
+                height: 1003
               }, 500, "linear", function() {
                 // Animation complete.
                 var targetOffset = footer.offset().top;
@@ -218,6 +214,46 @@
 
          
        });
+
+        $('.ul-filter-gallery li').click(function(e) { 
+            // alert("wtf");
+            // Process select catagory
+            var select_class = $(this).text().toLowerCase().split(" ")[0];
+
+            $(".grid-our-work  .grid-item").each(function( index ) {
+
+                var class_tag = $(this).attr('class').toLowerCase().split(" ");
+                class_tag = class_tag[class_tag.length-1]
+                console.log(class_tag);
+              if(class_tag == select_class || select_class == "all"){
+
+                $(this).fadeIn("slow");
+                $(this).show();
+
+              }else{
+
+                $(this).fadeIn("slow");
+                $(this).hide();
+
+              }
+
+            });
+
+            $('.ul-filter-gallery li').css({
+
+                'border-bottom': 'none',
+
+            });
+
+
+            $(this).css({
+
+                'border-bottom': '3px solid #01c6d9',
+
+            });
+
+
+        });
 
    
 

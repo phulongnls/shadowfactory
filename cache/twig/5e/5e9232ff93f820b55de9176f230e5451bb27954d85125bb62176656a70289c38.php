@@ -27,20 +27,15 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        $context["body_classes"] = $this->env->getExtension('Grav\Common\Twig\TwigExtension')->bodyClassFunc([0 => "header-fixed", 1 => "header-animated", 2 => "header-dark", 3 => "header-transparent", 4 => "sticky-footer"]);
-        // line 2
-        $context["grid_size"] = $this->env->getExtension('Grav\Common\Twig\TwigExtension')->themeVarFunc("grid-size");
-        // line 3
-        $context["compress"] = (($this->env->getExtension('Grav\Common\Twig\TwigExtension')->themeVarFunc("production-mode")) ? (".min.css") : (".css"));
-        // line 4
-        echo "<!DOCTYPE html>
+        echo "
+<!DOCTYPE html>
 <html lang=\"";
-        // line 5
+        // line 3
         echo (($this->getAttribute($this->getAttribute(($context["grav"] ?? null), "language", []), "getActive", [])) ? ($this->getAttribute($this->getAttribute(($context["grav"] ?? null), "language", []), "getActive", [])) : ($this->getAttribute($this->getAttribute($this->getAttribute(($context["grav"] ?? null), "config", []), "site", []), "default_lang", [])));
         echo "\">
 <head>
 ";
-        // line 7
+        // line 5
         $this->displayBlock('head', $context, $blocks);
         // line 47
         echo "</head>
@@ -69,22 +64,17 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
     ";
         // line 91
         $this->displayBlock('footer', $context, $blocks);
-        // line 163
+        // line 164
         echo "
 
 ";
-        // line 165
+        // line 166
         $this->displayBlock('bottom', $context, $blocks);
-        // line 168
+        // line 169
         echo "
 </body>
 
 <script type=\"text/javascript\">
-
-
-  
-
-
 
     \$(document).ready(function() {
   
@@ -93,9 +83,9 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
             // console.log(footer); 
             var height_footer = footer.height();
             // console.log(height_footer);
-            if(height_footer == 600){
+            if(height_footer == 1003){
                 footer.animate({
-                    height: 168
+                    height: 270
                 }, 500, \"linear\" , function() {
                 // Animation complete.
                 
@@ -108,7 +98,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
             }else{
              footer.animate({
-                height: 600
+                height: 1003
               }, 500, \"linear\", function() {
                 // Animation complete.
                 var targetOffset = footer.offset().top;
@@ -130,6 +120,46 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
          
        });
 
+        \$('.ul-filter-gallery li').click(function(e) { 
+            // alert(\"wtf\");
+            // Process select catagory
+            var select_class = \$(this).text().toLowerCase().split(\" \")[0];
+
+            \$(\".grid-our-work  .grid-item\").each(function( index ) {
+
+                var class_tag = \$(this).attr('class').toLowerCase().split(\" \");
+                class_tag = class_tag[class_tag.length-1]
+                console.log(class_tag);
+              if(class_tag == select_class || select_class == \"all\"){
+
+                \$(this).fadeIn(\"slow\");
+                \$(this).show();
+
+              }else{
+
+                \$(this).fadeIn(\"slow\");
+                \$(this).hide();
+
+              }
+
+            });
+
+            \$('.ul-filter-gallery li').css({
+
+                'border-bottom': 'none',
+
+            });
+
+
+            \$(this).css({
+
+                'border-bottom': '3px solid #01c6d9',
+
+            });
+
+
+        });
+
    
 
     });
@@ -138,13 +168,13 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 </html>";
     }
 
-    // line 7
+    // line 5
     public function block_head($context, array $blocks = [])
     {
-        // line 8
+        // line 6
         echo "    <meta charset=\"utf-8\" />
     <title>";
-        // line 9
+        // line 7
         if ($this->getAttribute(($context["header"] ?? null), "title", [])) {
             echo twig_escape_filter($this->env, $this->getAttribute(($context["header"] ?? null), "title", []), "html");
             echo " | ";
@@ -155,16 +185,16 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     ";
-        // line 13
-        $this->loadTemplate("partials/metadata.html.twig", "partials/shadowfactory.html.twig", 13)->display($context);
-        // line 14
+        // line 11
+        $this->loadTemplate("partials/metadata.html.twig", "partials/shadowfactory.html.twig", 11)->display($context);
+        // line 12
         echo "
     <link rel=\"icon\" type=\"image/png\" href=\"";
-        // line 15
+        // line 13
         echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("theme://images/favicon.png");
         echo "\" />
     <link rel=\"canonical\" href=\"";
-        // line 16
+        // line 14
         echo $this->getAttribute(($context["page"] ?? null), "url", [0 => true, 1 => true], "method");
         echo "\" />
 
@@ -184,7 +214,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
     <script src=\"https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js\"></script>
   
     ";
-        // line 33
+        // line 31
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 37
         echo "    ";
@@ -202,14 +232,20 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 ";
     }
 
-    // line 33
+    // line 31
     public function block_stylesheets($context, array $blocks = [])
     {
-        // line 34
+        // line 32
         echo "   
         ";
+        // line 33
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/shadow_factory_home.css"], "method");
+        // line 34
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/shadow_factory_blog.css"], "method");
         // line 35
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/shadow_factory.css"], "method");
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/shadow_factory_general.css"], "method");
         // line 36
         echo "    ";
     }
@@ -243,7 +279,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
                     <img src=\"";
         // line 58
         echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("theme://assets/afereri.jpg");
-        echo "\" alt=\"Smiley face\" height=\"42\" width=\"200\">
+        echo "\" alt=\"Smiley face\" height=\"47.72\" width=\"133.18\">
                 </div>
 
                 <div class=\"desktop-menu\">
@@ -332,13 +368,14 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
                    
 
                     <form class=\"form_footer\" action=\"https://shadowfactory.us18.list-manage.com/subscribe/post\" method=\"POST\" novalidate=\"\">
-                        <p>Email</p>
-                        <input class=\"input_footer\" type=\"email\" name=\"EMAIL\" id=\"\" value=\"\" autocapitalize=\"off\" autocorrect=\"off\">
-                        <p>Name</p>
-                        <input class=\"input_footer\" type=\"text\" name=\"NAME\" id=\"\" value=\"\">
-                        <p>Message</p>
-                        <textarea class=\"input_footer\" type=\"text\" name=\"MESSAGE\" id=\"\" row=\"4\"></textarea>
-                        <input id=\"submit-footer-form\" type=\"submit\" value=\"Submit\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"box p1 borderYellow\">
+                        <h6 class=\"label_form black\">Email</h6>
+                        <input class=\"input-form\" type=\"email\" name=\"EMAIL\" id=\"\" value=\"\" autocapitalize=\"off\" autocorrect=\"off\">
+                        <h6 class=\"label_form black\">Name</h6>
+                        <input class=\"input-form\" type=\"text\" name=\"NAME\" id=\"\" value=\"\">
+                        <h6 class=\"label-form black\">Message</h6>
+                        <textarea class=\"input-form\" type=\"text\" name=\"MESSAGE\" id=\"\" row=\"4\"></textarea>
+
+                        <input id=\"submit-footer-form\" type=\"submit\" value=\"submit\" name=\"subscribe\" class=\"button-factory button-yellow\">
 
 
                     </form>
@@ -391,10 +428,10 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
     ";
     }
 
-    // line 165
+    // line 166
     public function block_bottom($context, array $blocks = [])
     {
-        // line 166
+        // line 167
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "js", [0 => "bottom"], "method");
         echo "
@@ -413,7 +450,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
     public function getDebugInfo()
     {
-        return array (  398 => 166,  395 => 165,  321 => 92,  318 => 91,  313 => 84,  309 => 83,  301 => 82,  298 => 81,  292 => 85,  289 => 84,  287 => 81,  283 => 79,  280 => 78,  275 => 74,  271 => 65,  268 => 64,  265 => 63,  255 => 66,  253 => 63,  245 => 58,  237 => 52,  234 => 51,  230 => 43,  227 => 42,  224 => 41,  221 => 40,  218 => 39,  214 => 36,  212 => 35,  209 => 34,  206 => 33,  198 => 44,  196 => 39,  190 => 37,  188 => 33,  168 => 16,  164 => 15,  161 => 14,  159 => 13,  148 => 9,  145 => 8,  142 => 7,  79 => 168,  77 => 165,  73 => 163,  71 => 91,  66 => 88,  64 => 78,  59 => 75,  57 => 74,  54 => 73,  52 => 51,  46 => 47,  44 => 7,  39 => 5,  36 => 4,  34 => 3,  32 => 2,  30 => 1,);
+        return array (  435 => 167,  432 => 166,  357 => 92,  354 => 91,  349 => 84,  345 => 83,  337 => 82,  334 => 81,  328 => 85,  325 => 84,  323 => 81,  319 => 79,  316 => 78,  311 => 74,  307 => 65,  304 => 64,  301 => 63,  291 => 66,  289 => 63,  281 => 58,  273 => 52,  270 => 51,  266 => 43,  263 => 42,  260 => 41,  257 => 40,  254 => 39,  250 => 36,  247 => 35,  244 => 34,  242 => 33,  239 => 32,  236 => 31,  228 => 44,  226 => 39,  220 => 37,  218 => 31,  198 => 14,  194 => 13,  191 => 12,  189 => 11,  178 => 7,  175 => 6,  172 => 5,  74 => 169,  72 => 166,  68 => 164,  66 => 91,  61 => 88,  59 => 78,  54 => 75,  52 => 74,  49 => 73,  47 => 51,  41 => 47,  39 => 5,  34 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -426,9 +463,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
-{% set grid_size = theme_var('grid-size') %}
-{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+        return new Twig_Source("
 <!DOCTYPE html>
 <html lang=\"{{ grav.language.getActive ?: grav.config.site.default_lang }}\">
 <head>
@@ -460,7 +495,9 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
   
     {% block stylesheets %}
    
-        {% do assets.addCss('theme://css/shadow_factory.css') %}
+        {% do assets.addCss('theme://css/shadow_factory_home.css') %}
+        {% do assets.addCss('theme://css/shadow_factory_blog.css') %}
+        {% do assets.addCss('theme://css/shadow_factory_general.css') %}
     {% endblock %}
     {{ assets.css()|raw }}
 
@@ -483,7 +520,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
         
                 <div class=\"logo\">
                    
-                    <img src=\"{{ url('theme://assets/afereri.jpg') }}\" alt=\"Smiley face\" height=\"42\" width=\"200\">
+                    <img src=\"{{ url('theme://assets/afereri.jpg') }}\" alt=\"Smiley face\" height=\"47.72\" width=\"133.18\">
                 </div>
 
                 <div class=\"desktop-menu\">
@@ -531,13 +568,14 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
                    
 
                     <form class=\"form_footer\" action=\"https://shadowfactory.us18.list-manage.com/subscribe/post\" method=\"POST\" novalidate=\"\">
-                        <p>Email</p>
-                        <input class=\"input_footer\" type=\"email\" name=\"EMAIL\" id=\"\" value=\"\" autocapitalize=\"off\" autocorrect=\"off\">
-                        <p>Name</p>
-                        <input class=\"input_footer\" type=\"text\" name=\"NAME\" id=\"\" value=\"\">
-                        <p>Message</p>
-                        <textarea class=\"input_footer\" type=\"text\" name=\"MESSAGE\" id=\"\" row=\"4\"></textarea>
-                        <input id=\"submit-footer-form\" type=\"submit\" value=\"Submit\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"box p1 borderYellow\">
+                        <h6 class=\"label_form black\">Email</h6>
+                        <input class=\"input-form\" type=\"email\" name=\"EMAIL\" id=\"\" value=\"\" autocapitalize=\"off\" autocorrect=\"off\">
+                        <h6 class=\"label_form black\">Name</h6>
+                        <input class=\"input-form\" type=\"text\" name=\"NAME\" id=\"\" value=\"\">
+                        <h6 class=\"label-form black\">Message</h6>
+                        <textarea class=\"input-form\" type=\"text\" name=\"MESSAGE\" id=\"\" row=\"4\"></textarea>
+
+                        <input id=\"submit-footer-form\" type=\"submit\" value=\"submit\" name=\"subscribe\" class=\"button-factory button-yellow\">
 
 
                     </form>
@@ -598,11 +636,6 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
 <script type=\"text/javascript\">
 
-
-  
-
-
-
     \$(document).ready(function() {
   
        \$( \".footer-title\" ).click(function() {
@@ -610,9 +643,9 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
             // console.log(footer); 
             var height_footer = footer.height();
             // console.log(height_footer);
-            if(height_footer == 600){
+            if(height_footer == 1003){
                 footer.animate({
-                    height: 168
+                    height: 270
                 }, 500, \"linear\" , function() {
                 // Animation complete.
                 
@@ -625,7 +658,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
             }else{
              footer.animate({
-                height: 600
+                height: 1003
               }, 500, \"linear\", function() {
                 // Animation complete.
                 var targetOffset = footer.offset().top;
@@ -646,6 +679,46 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
          
        });
+
+        \$('.ul-filter-gallery li').click(function(e) { 
+            // alert(\"wtf\");
+            // Process select catagory
+            var select_class = \$(this).text().toLowerCase().split(\" \")[0];
+
+            \$(\".grid-our-work  .grid-item\").each(function( index ) {
+
+                var class_tag = \$(this).attr('class').toLowerCase().split(\" \");
+                class_tag = class_tag[class_tag.length-1]
+                console.log(class_tag);
+              if(class_tag == select_class || select_class == \"all\"){
+
+                \$(this).fadeIn(\"slow\");
+                \$(this).show();
+
+              }else{
+
+                \$(this).fadeIn(\"slow\");
+                \$(this).hide();
+
+              }
+
+            });
+
+            \$('.ul-filter-gallery li').css({
+
+                'border-bottom': 'none',
+
+            });
+
+
+            \$(this).css({
+
+                'border-bottom': '3px solid #01c6d9',
+
+            });
+
+
+        });
 
    
 

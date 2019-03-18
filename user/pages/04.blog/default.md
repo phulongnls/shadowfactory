@@ -1,155 +1,208 @@
 ---
 title: Blog
 ---
+<div id="content-blog">
+    <div class="slideshow">
+        <div class="text-section">
+            <h1 class="">VR INNOVATIONS FOR 2019</h1>
+            <p class="">Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+            <div class="link-section">
+                <a class="slideshow-link yellow" href="/shadowfactory/blog/webit2019"  >READ FULL STORY</a>
+            </div>
+            
+        </div>
+    </div>
 
-! Details on the full capabilities of Spectre.css can be found in the [Official Spectre Documentation](https://picturepan2.github.io/spectre/elements.html)
+    <div class="content">
+        <div class="blog-content-section">
+                    <div class="filter-gallery">
 
-The [Quark theme](https://github.com/getgrav/grav-theme-quark) is the new default theme for Grav built with [Spectre.css](https://picturepan2.github.io/spectre/) the lightweight, responsive and modern CSS framework. Spectre provides  basic styles for typography, elements, and a responsive layout system that utilizes best practices and consistent language design.
+            <ul class="ul-filter-gallery">
 
-### Headings
+                <li><h5>All</h5></li>
 
-# H1 Heading `40px`
+                <li><h5>Cloud Design</h5></li>
 
-## H2 Heading `32px`
+                <li><h5>Design</h5></li>
 
-### H3 Heading `28px`
+                <li><h5>Graphic design</h5></li>
 
-#### H4 Heading `24px`
+            </ul>
 
-##### H5 Heading `20px`
+        </div>
 
-###### H6 Heading `16px`
 
-```html
-# H1 Heading
-# H1 Heading `40px`</small>`
 
-<span class="h1">H1 Heading</span>
-```
+            <div class="grid-blog-content">
 
-### Paragraphs
+        
+                <div class="grid-item row1 col1 design">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-Lorem ipsum dolor sit amet, consectetur [adipiscing elit. Praesent risus leo, dictum in vehicula sit amet](#), feugiat tempus tellus. Duis quis sodales risus. Etiam euismod ornare consequat.
+                    </div>
 
-Climb leg rub face on everything give attitude nap all day for under the bed. Chase mice attack feet but rub face on everything hopped up on goofballs.
+                    <div class="gall-overlay">
+                        <div class="overlay-text white">
+                            <h4>Shadow Factory at WeBit Festival 2018</h4>
+                            <p>25/07/2018</p>
 
-### Markdown Semantic Text Elements
+                            <div class="blog-info">
+                                <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                            </div>
+                        </div>
 
-**Bold** `**Bold**`
+                    </div>
+                </div>
+          
+                <div class="grid-item row2 col1 design">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-_Italic_ `_Italic_`
+                    </div>
 
-~~Deleted~~ `~~Deleted~~`
+                   <div class="overlay-text white">
+                        <h4>Shadow Factory at WeBit Festival 2018</h4>
+                        <p>25/07/2018</p>
 
-`Inline Code` `` `Inline Code` ``
+                        <div class="blog-info">
+                            <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                        </div>
+                    </div>
+                </div>
 
-### HTML Semantic Text Elements
+                <div class="grid-item row1 col1 cloud">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-<abbr>I18N</abbr> `<abbr>`
+                    </div>
 
-<cite>Citation</cite> `<cite>`
+                   <div class="overlay-text">
+                        <h4>Shadow Factory at WeBit Festival 2018</h4>
+                        <p>25/07/2018</p>
 
-<kbd>Ctrl + S</kbd> `<kbd>`
+                        <div class="blog-info">
+                            <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                        </div>
+                    </div>
+                </div>
 
-Text<sup>Superscripted</sup> `<sup>`
+                <div class="grid-item row1 col1 design">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-Text<sub>Subscripted</sub> `<sub>`
+                    </div>
 
-<u>Underlined</u> `<u>`
+                   <div class="overlay-text">
+                        <h4>Shadow Factory at WeBit Festival 2018</h4>
+                        <p>25/07/2018</p>
 
-<mark>Highlighted</mark> `<mark>`
+                        <div class="blog-info">
+                            <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                        </div>
+                    </div>
+                </div>
 
-<time>20:14</time> `<time>`
+                <div class="grid-item row1 col1 cloud">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-<var>x = y + 2</var> `<var>`
+                    </div>
 
-### Blockquote
+                   <div class="overlay-text">
+                        <h4>Shadow Factory at WeBit Festival 2018</h4>
+                        <p>25/07/2018</p>
 
-> The advance of technology is based on making it fit in so that you don't really even notice it,
-> so it's part of everyday life.
->
-> <cite>- Bill Gates</cite>
+                        <div class="blog-info">
+                            <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                        </div>
+                    </div>
+                </div>
 
-```markdown
-> The advance of technology is based on making it fit in so that you don't really even notice it,
-> so it's part of everyday life.
->
-> <cite>- Bill Gates</cite>
-```
+                <div class="grid-item row1 col2 cloud">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-### Unordered List
+                    </div>
 
-* list item 1
-* list item 2
-    * list item 2.1
-    * list item 2.2
-    * list item 2.3
-* list item 3
+                   <div class="overlay-text">
+                        <h4>Shadow Factory at WeBit Festival 2018</h4>
+                        <p>25/07/2018</p>
 
-```markdown
-* list item 1
-* list item 2
-    * list item 2.1
-    * list item 2.2
-    * list item 2.3
-* list item 3
-```
+                        <div class="blog-info">
+                            <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                        </div>
+                    </div>
+                </div>
 
-### Ordered List
+                <div class="grid-item row1 col2 cloud">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-1. list item 1
-1. list item 2
-    1. list item 2.1
-    1. list item 2.2
-    1. list item 2.3
-1. list item 3
+                    </div>
 
-```markdown
-1. list item 1
-1. list item 2
-    1. list item 2.1
-    1. list item 2.2
-    1. list item 2.3
-1. list item 3
-```
+                   <div class="overlay-text">
+                        <h4>Shadow Factory at WeBit Festival 2018</h4>
+                        <p>25/07/2018</p>
 
-### Table
+                        <div class="blog-info">
+                            <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                        </div>
+                    </div>
+                </div>
 
-| Name                        | Genre                         | Release date         |
-| :-------------------------- | :---------------------------: | -------------------: |
-| The Shawshank Redemption    | Crime, Drama                  | 14 October 1994      |
-| The Godfather               | Crime, Drama                  | 24 March 1972        |
-| Schindler's List            | Biography, Drama, History     | 4 February 1994      |
-| Se7en                       | Crime, Drama, Mystery         | 22 September 1995    |
+                <div class="grid-item row2 col2 design">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-```markdown
-| Name                        | Genre                         | Release date         |
-| :-------------------------- | :---------------------------: | -------------------: |
-| The Shawshank Redemption    | Crime, Drama                  | 14 October 1994      |
-| The Godfather               | Crime, Drama                  | 24 March 1972        |
-| Schindler's List            | Biography, Drama, History     | 4 February 1994      |
-| Se7en                       | Crime, Drama, Mystery         | 22 September 1995    |
-```
+                    </div>
 
-### Notices
+                   <div class="overlay-text">
+                        <h3>Shadow Factory at WeBit Festival 2018</h3>
+                        <p>25/07/2018</p>
 
-The notices styles are actually provided by the `markdown-notices` plugin but are useful enough to include here:
+                        <div class="blog-info">
+                            <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                        </div>
+                    </div>
+                </div>
 
-! This is a warning notification
+                <div class="grid-item row1 col1 graphic">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-!! This is a error notification
+                    </div>
 
-!!! This is a default notification
+                   <div class="overlay-text">
+                        <h4>Shadow Factory at WeBit Festival 2018</h4>
+                        <p>25/07/2018</p>
 
-!!!! This is a success notification
+                        <div class="blog-info">
+                            <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                        </div>
+                    </div>
+                </div>
 
-```markdown
-! This is a warning notification
+                <div class="grid-item row1 col1 graphic">
+                    <div class="tag_news">
+                        <h6>news</h6>
 
-!! This is a error notification
+                    </div>
 
-!!! This is a default notification
+                   <div class="overlay-text">
+                        <h4>Shadow Factory at WeBit Festival 2018</h4>
+                        <p>25/07/2018</p>
 
-!!!! This is a success notification
-```
+                        <div class="blog-info">
+                            <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
 

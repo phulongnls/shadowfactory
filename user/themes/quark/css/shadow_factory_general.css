@@ -1,0 +1,193 @@
+h1{
+	font-size: 100pt;
+	line-height: 100pt;
+	font-family: Gotham;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 80pt;
+	line-height: 80pt;
+	font-family: Gotham;
+	font-weight: bold;
+}
+
+h3{
+	font-size: 50pt;
+	line-height: 56pt;
+	font-family: Gotham;
+	font-weight: bold;
+}
+
+h4{
+	font-size: 36pt;
+	line-height: 40pt;
+	font-family: Gotham;
+	font-weight: bold;
+}
+
+h5{
+	font-size: 24pt;
+	line-height: 28pt;
+	font-family: Gotham;
+	font-weight: bold;
+}
+
+h6{
+	font-size: 20pt;
+	line-height: 22pt;
+	font-family: Gotham;
+	font-weight: normal;
+}
+
+p{
+	font-size: 18pt;
+	line-height: 20pt;
+	font-family: Gotham;
+	font-weight: normal;
+}
+
+.light-blue{
+	color: #C7EAFB;
+}
+
+.blue{
+	color: #00AEEF;
+}
+
+.black-blue{
+	color: #005C8E;
+}
+
+.black{
+	color: #000000;
+}
+
+.white{
+	color: #FFFFFF;
+}
+
+.yellow{
+	color: #FFCC04 !important;
+}
+
+.light-yellow{
+	color: #FFE17F;
+}
+
+.orange{
+	color: #FAA61A;
+}
+
+.label-form{
+	margin-bottom: 10px;
+}
+
+.light-blue{
+	color: #C7EAFB;
+}
+
+.blue-background{
+	background-color: #00AEEF;
+}
+
+.black-blue-background{
+	background-color: #005C8E;
+}
+
+.black-background{
+	background-color: #000000;
+}
+
+.white-background{
+	background-color: #FFFFFF;
+}
+
+.yellow-background{
+	background-color: #FFCC04;
+}
+
+.light-yellow-background{
+	background-color: #FFE17F;
+}
+
+.orange-background{
+	background-color: #FAA61A;
+}
+
+.label-form{
+	margin-bottom: 10px;
+}
+
+.input-form{
+	height: 50px;
+	width: 100%;
+	background: transparent;
+	border: thin solid #000000;
+}
+
+.button-factory{
+	height: 39px;
+	width: 163px;
+	background: transparent;
+}
+
+.button-yellow{
+	border: thin solid #FFCC04;
+	color: #FFCD09;
+}
+
+.button-yellow:hover{
+	border: thin solid #FFCD09;
+	background-color: #FFCD09;
+	color: #FFFFFF;
+}
+
+.active-yellow{
+	border: thin solid #FAA61A;
+	background-color: #FAA61A;
+	color: #FFFFFF;
+}
+
+.button-blue{
+	border: thin solid #00AEEF;
+	color: #00AEEF;
+}
+
+.button-blue:hover{
+	border: thin solid #00AEEF;
+	background-color: #00AEEF;
+	color: #FFFFFF;
+}
+
+.active-blue{
+	border: thin solid #005C8E;
+	background-color: #005C8E;
+	color: #FFFFFF;
+}
+
+.button-black{
+	border: thin solid #E2E2E2;
+	color: #000000;
+}
+
+.button-black:hover{
+	border: thin solid #A1A1A1;
+	background-color: #A1A1A1;
+	color: #FFFFFF;
+}
+
+.active-black{
+	border: thin solid #000000;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.socials a{
+	display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: red;
+    
+}
+

@@ -24,20 +24,13 @@ class __TwigTemplate_df42d1f22ebfc4c42cae5552f98024db3b556bb45e1f05316a6bc42733a
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 6
+    // line 3
     public function block_content($context, array $blocks = [])
     {
-        // line 7
+        // line 4
         echo "
-\t   \t<div class=\"video_background\">
-        <video autoplay=\"true\" controls=\"\" loop=\"\" src=\"";
-        // line 9
-        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("theme://assets/nav_background.mp4");
-        echo "\"></video>
-    </div>
-
     ";
-        // line 12
+        // line 5
         echo $this->getAttribute(($context["page"] ?? null), "content", []);
         echo "
 ";
@@ -55,7 +48,7 @@ class __TwigTemplate_df42d1f22ebfc4c42cae5552f98024db3b556bb45e1f05316a6bc42733a
 
     public function getDebugInfo()
     {
-        return array (  41 => 12,  35 => 9,  31 => 7,  28 => 6,  11 => 1,);
+        return array (  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -70,14 +63,7 @@ class __TwigTemplate_df42d1f22ebfc4c42cae5552f98024db3b556bb45e1f05316a6bc42733a
     {
         return new Twig_Source("{% extends 'partials/shadowfactory.html.twig' %}
 
-       
-
-
 {% block content %}
-
-\t   \t<div class=\"video_background\">
-        <video autoplay=\"true\" controls=\"\" loop=\"\" src=\"{{ url('theme://assets/nav_background.mp4') }}\"></video>
-    </div>
 
     {{ page.content|raw }}
 {% endblock %}

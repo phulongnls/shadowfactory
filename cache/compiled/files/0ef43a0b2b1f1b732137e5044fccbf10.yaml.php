@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/shadowfactory/user/config/system.yaml',
-    'modified' => 1552374200,
+    'modified' => 1552644865,
     'data' => [
         'absolute_urls' => false,
         'home' => [
@@ -11,11 +11,11 @@ return [
         'pages' => [
             'theme' => 'quark',
             'markdown' => [
-                'extra' => false
+                'extra' => true
             ],
             'process' => [
                 'markdown' => true,
-                'twig' => false
+                'twig' => true
             ]
         ],
         'cache' => [
