@@ -251,3 +251,57 @@ textarea.input-form{
   transform: scaleX(1);
 }
 
+/*Navigation*/
+.logo{
+	width: 133.18px;
+    height: 47.72px;
+	margin: 0;
+	padding: 0;
+	/*margin-right: 52.5%;*/
+	float: left;
+}
+
+.navigation{
+	display: inline-block;
+	width: 100%;
+	padding: 0 6.6%;
+}
+
+.desktop-menu ul{
+	float: right;
+	display: inline-block;
+	list-style-type: none;
+	/*width: 33%;*/
+	width: 572px;
+
+}
+
+.desktop-menu ul li{
+	float: left;
+	/*padding: 0;
+	margin: 0;*/
+	/*width: 20%;*/
+}
+
+.desktop-menu ul li a{
+	font-size: 20px;
+    margin-left: 73px;
+    color: #fff;
+    font-family: "Gotham", sans-serif;   
+    font-weight: 400;
+   	font-style: normal;
+    font-variant: normal;
+
+	padding-bottom: 5px;
+	text-decoration: none;
+    background: linear-gradient(0deg, currentcolor, currentcolor) bottom center no-repeat;
+	background-size: 0px 3px;
+	transition: 0.2s;
+
+}
+
+.desktop-menu ul li a:hover{
+	background-size: 100% 3px;
+
+}
+

@@ -1,0 +1,38 @@
+/*640 and less, 768, 969, 1024, 1200+*/
+@media screen and (max-width: 1024px){
+	.our-work-section{
+		background-color: red;
+	}
+	.grid-our-work {
+		 grid-template-columns: repeat(2, 1fr); 
+	}
+
+	.row2{grid-row-end: span 1;}
+	.col2{grid-column-end: span 1;}
+}
+
+@media screen and (max-width: 969px){
+	.our-work-section{
+		background-color: green;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.our-work-section{
+		background-color: yellow;
+	}
+
+	.grid-our-work {
+		grid-template-columns: repeat(1, 1fr); 
+	}
+
+	.grid-clients-partners{
+		grid-template-columns: repeat(3, 1fr); 
+	}
+}
+
+@media screen and (max-width: 640px){
+	.our-work-section{
+		background-color: orange;
+	}
+}
