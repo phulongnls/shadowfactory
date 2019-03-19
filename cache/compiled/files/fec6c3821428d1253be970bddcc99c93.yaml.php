@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'plugins://taxonomylist/taxonomylist.yaml',
-    'modified' => 1552886151,
+    'modified' => 1552985256,
     'data' => [
         'enabled' => true,
         'route' => '/blog'

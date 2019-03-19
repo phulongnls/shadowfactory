@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1552978190,
-    'checksum' => '4f7136aa8c7f3aa46898a689987e4e92',
+    'timestamp' => 1552987250,
+    'checksum' => 'aae6301ccce1b47f71d785171a329686',
     'files' => [
         'user/config' => [
             'media' => [
@@ -11,7 +11,7 @@ return [
             ],
             'plugins/editable-contenttools' => [
                 'file' => 'user/config/plugins/editable-contenttools.yaml',
-                'modified' => 1552890717
+                'modified' => 1552985256
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -19,7 +19,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1552891257
+                'modified' => 1552985256
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -27,7 +27,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1552978190
+                'modified' => 1552985256
             ]
         ],
         'system/config' => [
@@ -49,7 +49,7 @@ return [
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1552965470
+                'modified' => 1552987167
             ]
         ],
         'user/plugins' => [
@@ -71,7 +71,7 @@ return [
             ],
             'plugins/taxonomylist' => [
                 'file' => 'user/plugins/taxonomylist/taxonomylist.yaml',
-                'modified' => 1552886151
+                'modified' => 1552985256
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
