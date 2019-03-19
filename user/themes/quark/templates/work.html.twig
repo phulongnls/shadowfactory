@@ -20,6 +20,8 @@
         {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
         {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
         {% do assets.addCss('theme://css-compiled/theme'~compress) %}
+        {% do assets.addCss('theme://css-compiled/theme.css') %}
+        {% do assets.addCss('theme://css-compiled/work.css') %}
         {% do assets.addCss('theme://css/custom.css') %}
         {% do assets.addCss('theme://css/line-awesome.min.css') %}
     {% endblock %}
@@ -35,7 +37,50 @@
 {% endblock head %}
 </head>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+
 
 {% block content %}
     {{ page.content|raw }}
 {% endblock %}
+
+<script type="text/javascript">
+    $('.lazy').Lazy();
+    var $grid = $('.list-works .grid-item').isotope({
+            itemSelector: '.item',
+            layoutMode: 'masonry',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.grid-sizer',
+                gutter: 12
+            }
+    });
+
+    $('.list-works .filter').on( 'click', 'button', function() {
+        if (!$(this).hasClass('active')) {
+            $('.list-works .filter button').removeClass('active');
+            $(this).addClass('active');
+            var filterValue = $( this ).attr('data-filter');
+            if (filterValue == '*') {
+                $('.list-works .grid-item .item').each(function(e) {
+                    var classAll = $(this).data('all');
+                    var classType = $(this).data('type');
+                    $(this).removeClass(classType);
+                    $(this).addClass(classAll);
+                });
+            } else {
+                $('.list-works .grid-item .item').each(function(e) {
+                    var classAll = $(this).data('all');
+                    var classType = $(this).data('type');
+                    $(this).removeClass(classAll);
+                    $(this).addClass(classType);
+                });
+            }
+            $grid.imagesLoaded().progress( function() {
+                $grid.isotope({ filter: filterValue });
+            });
+        }
+    });
+</script>

@@ -35,13 +35,58 @@ class __TwigTemplate_6f98b3ba643f75c64b13ff977d251e3c42bdbe03b9fe4c75b9970a30b58
 ";
         // line 7
         $this->displayBlock('head', $context, $blocks);
-        // line 36
+        // line 38
         echo "</head>
+
+<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js\"></script>
+<script src=\"https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js\"></script>
+<script src=\"https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js\"></script>
 
 
 ";
-        // line 39
+        // line 45
         $this->displayBlock('content', $context, $blocks);
+        // line 48
+        echo "
+<script type=\"text/javascript\">
+    \$('.lazy').Lazy();
+    var \$grid = \$('.list-works .grid-item').isotope({
+            itemSelector: '.item',
+            layoutMode: 'masonry',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.grid-sizer',
+                gutter: 12
+            }
+    });
+
+    \$('.list-works .filter').on( 'click', 'button', function() {
+        if (!\$(this).hasClass('active')) {
+            \$('.list-works .filter button').removeClass('active');
+            \$(this).addClass('active');
+            var filterValue = \$( this ).attr('data-filter');
+            if (filterValue == '*') {
+                \$('.list-works .grid-item .item').each(function(e) {
+                    var classAll = \$(this).data('all');
+                    var classType = \$(this).data('type');
+                    \$(this).removeClass(classType);
+                    \$(this).addClass(classAll);
+                });
+            } else {
+                \$('.list-works .grid-item .item').each(function(e) {
+                    var classAll = \$(this).data('all');
+                    var classType = \$(this).data('type');
+                    \$(this).removeClass(classAll);
+                    \$(this).addClass(classType);
+                });
+            }
+            \$grid.imagesLoaded().progress( function() {
+                \$grid.isotope({ filter: filterValue });
+            });
+        }
+    });
+</script>
+";
     }
 
     // line 7
@@ -77,15 +122,15 @@ class __TwigTemplate_6f98b3ba643f75c64b13ff977d251e3c42bdbe03b9fe4c75b9970a30b58
     ";
         // line 18
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 26
+        // line 28
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "css", [], "method");
         echo "
 
     ";
-        // line 28
+        // line 30
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 33
+        // line 35
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "js", [], "method");
         echo "
@@ -114,34 +159,40 @@ class __TwigTemplate_6f98b3ba643f75c64b13ff977d251e3c42bdbe03b9fe4c75b9970a30b58
         $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => ("theme://css-compiled/theme" . ($context["compress"] ?? null))], "method");
         // line 23
         echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/custom.css"], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css-compiled/theme.css"], "method");
         // line 24
         echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/line-awesome.min.css"], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css-compiled/work.css"], "method");
         // line 25
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/custom.css"], "method");
+        // line 26
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/line-awesome.min.css"], "method");
+        // line 27
         echo "    ";
     }
 
-    // line 28
+    // line 30
     public function block_javascripts($context, array $blocks = [])
     {
-        // line 29
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => 101], "method");
-        // line 30
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/jquery.treemenu.js", 1 => ["group" => "bottom"]], "method");
         // line 31
         echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/site.js", 1 => ["group" => "bottom"]], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => 101], "method");
         // line 32
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/jquery.treemenu.js", 1 => ["group" => "bottom"]], "method");
+        // line 33
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/site.js", 1 => ["group" => "bottom"]], "method");
+        // line 34
         echo "    ";
     }
 
-    // line 39
+    // line 45
     public function block_content($context, array $blocks = [])
     {
-        // line 40
+        // line 46
         echo "    ";
         echo $this->getAttribute(($context["page"] ?? null), "content", []);
         echo "
@@ -160,7 +211,7 @@ class __TwigTemplate_6f98b3ba643f75c64b13ff977d251e3c42bdbe03b9fe4c75b9970a30b58
 
     public function getDebugInfo()
     {
-        return array (  145 => 40,  142 => 39,  138 => 32,  135 => 31,  132 => 30,  129 => 29,  126 => 28,  122 => 25,  119 => 24,  116 => 23,  113 => 22,  108 => 21,  103 => 20,  100 => 19,  97 => 18,  89 => 33,  87 => 28,  81 => 26,  79 => 18,  74 => 16,  70 => 15,  67 => 14,  65 => 13,  54 => 9,  51 => 8,  48 => 7,  44 => 39,  39 => 36,  37 => 7,  32 => 5,  29 => 4,  27 => 3,  25 => 2,  23 => 1,);
+        return array (  196 => 46,  193 => 45,  189 => 34,  186 => 33,  183 => 32,  180 => 31,  177 => 30,  173 => 27,  170 => 26,  167 => 25,  164 => 24,  161 => 23,  158 => 22,  153 => 21,  148 => 20,  145 => 19,  142 => 18,  134 => 35,  132 => 30,  126 => 28,  124 => 18,  119 => 16,  115 => 15,  112 => 14,  110 => 13,  99 => 9,  96 => 8,  93 => 7,  50 => 48,  48 => 45,  39 => 38,  37 => 7,  32 => 5,  29 => 4,  27 => 3,  25 => 2,  23 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -195,6 +246,8 @@ class __TwigTemplate_6f98b3ba643f75c64b13ff977d251e3c42bdbe03b9fe4c75b9970a30b58
         {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
         {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
         {% do assets.addCss('theme://css-compiled/theme'~compress) %}
+        {% do assets.addCss('theme://css-compiled/theme.css') %}
+        {% do assets.addCss('theme://css-compiled/work.css') %}
         {% do assets.addCss('theme://css/custom.css') %}
         {% do assets.addCss('theme://css/line-awesome.min.css') %}
     {% endblock %}
@@ -210,9 +263,53 @@ class __TwigTemplate_6f98b3ba643f75c64b13ff977d251e3c42bdbe03b9fe4c75b9970a30b58
 {% endblock head %}
 </head>
 
+<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js\"></script>
+<script src=\"https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js\"></script>
+<script src=\"https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js\"></script>
+
 
 {% block content %}
     {{ page.content|raw }}
-{% endblock %}", "work.html.twig", "/var/www/html/shadowfactory/user/themes/quark/templates/work.html.twig");
+{% endblock %}
+
+<script type=\"text/javascript\">
+    \$('.lazy').Lazy();
+    var \$grid = \$('.list-works .grid-item').isotope({
+            itemSelector: '.item',
+            layoutMode: 'masonry',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.grid-sizer',
+                gutter: 12
+            }
+    });
+
+    \$('.list-works .filter').on( 'click', 'button', function() {
+        if (!\$(this).hasClass('active')) {
+            \$('.list-works .filter button').removeClass('active');
+            \$(this).addClass('active');
+            var filterValue = \$( this ).attr('data-filter');
+            if (filterValue == '*') {
+                \$('.list-works .grid-item .item').each(function(e) {
+                    var classAll = \$(this).data('all');
+                    var classType = \$(this).data('type');
+                    \$(this).removeClass(classType);
+                    \$(this).addClass(classAll);
+                });
+            } else {
+                \$('.list-works .grid-item .item').each(function(e) {
+                    var classAll = \$(this).data('all');
+                    var classType = \$(this).data('type');
+                    \$(this).removeClass(classAll);
+                    \$(this).addClass(classType);
+                });
+            }
+            \$grid.imagesLoaded().progress( function() {
+                \$grid.isotope({ filter: filterValue });
+            });
+        }
+    });
+</script>
+", "work.html.twig", "/var/www/html/shadowfactory/user/themes/quark/templates/work.html.twig");
     }
 }

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/html/shadowfactory/system/config/system.yaml',
-    'modified' => 1552891232,
+    'modified' => 1552965470,
     'data' => [
         'absolute_urls' => false,
         'timezone' => '',
@@ -131,7 +131,7 @@ return [
             'css_pipeline_include_externals' => true,
             'css_pipeline_before_excludes' => true,
             'css_minify' => true,
-            'css_minify_windows' => false,
+            'css_minify_windows' => true,
             'css_rewrite' => true,
             'js_pipeline' => false,
             'js_pipeline_include_externals' => true,
