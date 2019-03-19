@@ -64,13 +64,13 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
     ";
         // line 91
         $this->displayBlock('footer', $context, $blocks);
-        // line 164
+        // line 183
         echo "
 
 ";
-        // line 166
+        // line 185
         $this->displayBlock('bottom', $context, $blocks);
-        // line 169
+        // line 188
         echo "
 </body>
 
@@ -78,7 +78,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
     \$(document).ready(function() {
   
-       \$( \".footer-title\" ).click(function() {
+        \$( \".footer-title\" ).click(function() {
             var footer = \$('#footer');
             // console.log(footer); 
             var height_footer = footer.height();
@@ -118,25 +118,69 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
       
 
          
-       });
+        });
+
+
+        function getArrayRowCol(class_name){
+           
+            var array_row_col = [];
+    
+            let arr_len = \$(\".grid-blog-content .grid-item\").length;
+
+            for(let i = 0; i < arr_len; i++){
+                let str = \$(\$(\".grid-blog-content .grid-item\")[i]).attr(\"class\");
+      
+                if(str){
+                    // console.log(\"wtfffffffffffffff\");
+                    // console.log(str);
+                    // console.log(class_name);
+                    // console.log(str.search(class_name));
+
+                    if(str.search(class_name)!=-1){
+                        let index_str_row = str.search(\"row\");
+                        let index_str_col = str.search(\"col\");
+
+                        let num_row = str[index_str_row+3];
+                        let num_col = str[index_str_col+3];
+
+                        let point = {
+                            cow: num_col,
+                            row: num_row,
+                        };
+
+                        array_row_col.push(point);
+                    }
+                  
+                }
+      
+            }
+
+            return array_row_col;
+
+            // console.log(\"hello\");
+            // console.log(array_row_col);
+        }
 
         \$('.ul-filter-gallery li').click(function(e) { 
-            // alert(\"wtf\");
+           
             // Process select catagory
             var select_class = \$(this).text().toLowerCase().split(\" \")[0];
 
-            \$(\".grid-our-work  .grid-item\").each(function( index ) {
+            \$(\".grid-blog-content .grid-item\").each(function( index ) {
 
                 var class_tag = \$(this).attr('class').toLowerCase().split(\" \");
                 class_tag = class_tag[class_tag.length-1]
-                console.log(class_tag);
+                // console.log(class_tag);
               if(class_tag == select_class || select_class == \"all\"){
 
+              
                 \$(this).fadeIn(\"slow\");
                 \$(this).show();
 
               }else{
 
+
+                // test(select_class);
                 \$(this).fadeIn(\"slow\");
                 \$(this).hide();
 
@@ -157,10 +201,148 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
             });
 
-
+            test(select_class);
         });
 
-   
+        \$.fn.swapWith = function(that) {
+          var \$this = this;
+          var \$that = \$(that);
+
+          // create temporary placeholder
+          var \$temp = \$(\"<div>\");
+
+          // 3-step swap
+          \$this.before(\$temp);
+          \$that.before(\$this);
+          \$temp.after(\$that).remove();
+
+          return \$this;
+        }
+
+
+
+        var count = 0;
+        // var arr_len = \$(\".grid-blog-content .grid-item\").length;
+        // console.log(\"arr_len\");
+        // console.log(arr_len);
+
+         // \$(\".grid-blog-content .grid-item\")[0].replaceWith( \$(\".grid-blog-content .grid-item\")[1] );
+
+        function test(select_class){
+
+            if(select_class == \"all\"){
+                select_class = \"\";
+            }else{
+                select_class = \".\"+select_class;
+            }
+
+             var arr_len = \$(\".grid-blog-content .grid-item\"+select_class).length;
+            \$(\".grid-blog-content .grid-item.design\").each(function( index ) {
+                console.log();
+                console.log(this);
+                // let str = \$(\$(\".grid-blog-content .grid-item\")[index]).attr(\"class\");
+
+                // console.log(\"test function\");
+                // console.log(str);
+                // console.log(str.search(select_class));
+
+                // if(str.search(select_class) != -1){
+
+                    let count = 0;
+                    let j_index;
+           
+                    for(let i = index; i < arr_len; i++){
+                        if(count == 4){
+                            j_index = i - 1;
+                            // console.log('j index  = 4');
+                            // console.log(index);
+                            // console.log(j_index);
+
+                            // getArrayRowCol(select_class);
+                            break;
+                        }else{
+
+                            let row_col = getRowCol(i,select_class);
+                            let tmp = count + parseInt(row_col[0]);
+                            let count_before = count;
+
+                            if(tmp>4){
+                                tmp = count_before;
+                            }
+                            count += parseInt(row_col[0]);
+
+                            if(count > 4){
+                                count = 0;
+                                j_index = i;
+
+                                
+                                for(let z = j_index; z < arr_len; z++){
+                                    // console.log(\"z\")
+                                    // console.log(z);
+                                    // console.log(arr_len);
+                                    if(z != arr_len){
+                                        let row_col = getRowCol(z,select_class);
+                                        if(count_before + parseInt(row_col[0]) == 4){
+                                            // console.log(\"change j_index z\");
+                                            // console.log(j_index);
+                                            // console.log(z);
+
+                                            // console.log(\$(\".grid-blog-content .grid-item\")[j_index]);
+                                            // console.log(\$(\".grid-blog-content .grid-item\")[z]);
+                                            \$(\$(\".grid-blog-content .grid-item\"+select_class)[j_index]).swapWith(\$(\".grid-blog-content .grid-item\"+select_class)[z]);
+                 
+                                            break;
+                                        } 
+                                    }
+
+                                    if(z == arr_len-1){
+                                        \$(\$(\".grid-blog-content .grid-item\"+select_class)[z]).swapWith(\$(\".grid-blog-content .grid-item\"+select_class)[z-1]);
+                                    }
+                                  
+                                } 
+                            
+                                // console.log(\"j_index > 4\");
+                                // console.log(index);
+                                // console.log( j_index);
+
+                                break;
+                            }else{
+                              
+                                
+                            }
+                        }
+                    }
+                    // console.log(num_row);
+                    // console.log(num_col);
+               
+
+                // }
+            });
+
+        }
+
+        function getRowCol(index, select_class){
+            // console.log(\"getRowCol\");
+            // console.log(index);
+            let str = \$(\$(\".grid-blog-content .grid-item\"+select_class)[index]).attr(\"class\");
+            // console.log(str);
+
+            if(str){
+                let index_str_row = str.search(\"row\");
+                let index_str_col = str.search(\"col\");
+
+                let num_row = str[index_str_row+3];
+                let num_col = str[index_str_col+3];
+
+                  return [num_col, num_row];
+            }else{
+                return false;
+            }
+      
+
+          
+        }
+
 
     });
 </script>
@@ -368,11 +550,11 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
                    
 
                     <form class=\"form_footer\" action=\"https://shadowfactory.us18.list-manage.com/subscribe/post\" method=\"POST\" novalidate=\"\">
-                        <h6 class=\"label_form black\">Email</h6>
+                        <h6 class=\"label_form white\">Email</h6>
                         <input class=\"input-form\" type=\"email\" name=\"EMAIL\" id=\"\" value=\"\" autocapitalize=\"off\" autocorrect=\"off\">
-                        <h6 class=\"label_form black\">Name</h6>
+                        <h6 class=\"label_form white\">Name</h6>
                         <input class=\"input-form\" type=\"text\" name=\"NAME\" id=\"\" value=\"\">
-                        <h6 class=\"label-form black\">Message</h6>
+                        <h6 class=\"label-form white\">Message</h6>
                         <textarea class=\"input-form\" type=\"text\" name=\"MESSAGE\" id=\"\" row=\"4\"></textarea>
 
                         <input id=\"submit-footer-form\" type=\"submit\" value=\"submit\" name=\"subscribe\" class=\"button-factory button-yellow\">
@@ -384,18 +566,37 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
                 <div class=\"right-section\">
                 
                     <div class=\"socials\">
-                        <a href=\"#\" target=\"_blank\" class=\"fab fa-facebook-f\"></a>
-                        <a href=\"#\" target=\"_blank\" class=\"fab fa-twitter\"></a>
-                        <a href=\"#\" target=\"_blank\" class=\"fab fa-linkedin-in\"></a>
-                        <a href=\"#\" target=\"_blank\" class=\"fab fa-instagram\"></a>
-                        <a href=\"#\" target=\"_blank\" class=\"fas fa-envelope\"></a>
+                        <a href=\"#\" target=\"_blank\" class=\"fab fa-facebook-f\">
+                            <svg aria-hidden=\"true\" data-prefix=\"fab\" data-icon=\"twitter\" class=\"svg-inline--fa fa-twitter fa-w-16 \" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><path fill=\"currentColor\" d=\"M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z\"></path></svg>
+                        </a>
+                        <a href=\"#\" target=\"_blank\" class=\"fab fa-twitter\">
+                            <svg aria-hidden=\"true\" data-prefix=\"fab\" data-icon=\"facebook-f\" class=\"svg-inline--fa fa-facebook-f fa-w-9 \" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 264 512\"><path fill=\"currentColor\" d=\"M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229\"></path></svg>
+                        </a>
+                        <a href=\"#\" target=\"_blank\" class=\"fab fa-linkedin-in\">
+                           <svg aria-hidden=\"true\" data-prefix=\"fab\" data-icon=\"instagram\" class=\"svg-inline--fa fa-instagram fa-w-14 \" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><path fill=\"currentColor\" d=\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z\"></path></svg>
+                        </a>
+                        <a href=\"#\" target=\"_blank\" class=\"fab fa-instagram\">
+                            <svg aria-hidden=\"true\" data-prefix=\"fab\" data-icon=\"linkedin-in\" class=\"svg-inline--fa fa-linkedin-in fa-w-14 \" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><path fill=\"currentColor\" d=\"M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z\"></path></svg>
+
+                        </a>
+               
                     </div>
 
-                    <p>Where to find us</p>
-                    <p>Where to find us</p>
-                    <button data-toggle=\"modal\" data-target=\"#modal-privaci-policy\">Privacy Policy</button>
+                    <div class=\"rights-reserved-section\">
+                        <p>@ 2009 Shadow Factory</p>
+                        <p>All Rights Reserved.</p>
+                    </div>
 
-             
+                
+
+                    <button id=\"btn-privacy-policy\" data-toggle=\"modal\" data-target=\"#modal-privacy-policy\">
+                        <div id=\"icon-arrow\">
+                            <svg aria-hidden=\"true\" data-prefix=\"fas\" data-icon=\"chevron-right\" class=\"svg-inline--fa fa-chevron-right fa-w-10 textYellow\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 512\"><path fill=\"currentColor\" d=\"M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z\"></path>
+                            </svg>
+                        </div>
+                        <p>Privacy Policy</p>
+                    </button>
+
                 </div>
 
             </div>
@@ -403,7 +604,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
         </div>
 
                <!-- Modal -->
-                    <div class=\"modal fade\" id=\"modal-privaci-policy\" role=\"dialog\">
+                    <div class=\"modal fade\" id=\"modal-privacy-policy\" role=\"dialog\">
                         <div class=\"modal-dialog modal-privacy-policy-dialog\">
                             
                           <!-- Modal content-->
@@ -428,10 +629,10 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
     ";
     }
 
-    // line 166
+    // line 185
     public function block_bottom($context, array $blocks = [])
     {
-        // line 167
+        // line 186
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "js", [0 => "bottom"], "method");
         echo "
@@ -450,7 +651,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
     public function getDebugInfo()
     {
-        return array (  435 => 167,  432 => 166,  357 => 92,  354 => 91,  349 => 84,  345 => 83,  337 => 82,  334 => 81,  328 => 85,  325 => 84,  323 => 81,  319 => 79,  316 => 78,  311 => 74,  307 => 65,  304 => 64,  301 => 63,  291 => 66,  289 => 63,  281 => 58,  273 => 52,  270 => 51,  266 => 43,  263 => 42,  260 => 41,  257 => 40,  254 => 39,  250 => 36,  247 => 35,  244 => 34,  242 => 33,  239 => 32,  236 => 31,  228 => 44,  226 => 39,  220 => 37,  218 => 31,  198 => 14,  194 => 13,  191 => 12,  189 => 11,  178 => 7,  175 => 6,  172 => 5,  74 => 169,  72 => 166,  68 => 164,  66 => 91,  61 => 88,  59 => 78,  54 => 75,  52 => 74,  49 => 73,  47 => 51,  41 => 47,  39 => 5,  34 => 3,  30 => 1,);
+        return array (  636 => 186,  633 => 185,  539 => 92,  536 => 91,  531 => 84,  527 => 83,  519 => 82,  516 => 81,  510 => 85,  507 => 84,  505 => 81,  501 => 79,  498 => 78,  493 => 74,  489 => 65,  486 => 64,  483 => 63,  473 => 66,  471 => 63,  463 => 58,  455 => 52,  452 => 51,  448 => 43,  445 => 42,  442 => 41,  439 => 40,  436 => 39,  432 => 36,  429 => 35,  426 => 34,  424 => 33,  421 => 32,  418 => 31,  410 => 44,  408 => 39,  402 => 37,  400 => 31,  380 => 14,  376 => 13,  373 => 12,  371 => 11,  360 => 7,  357 => 6,  354 => 5,  74 => 188,  72 => 185,  68 => 183,  66 => 91,  61 => 88,  59 => 78,  54 => 75,  52 => 74,  49 => 73,  47 => 51,  41 => 47,  39 => 5,  34 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -568,11 +769,11 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
                    
 
                     <form class=\"form_footer\" action=\"https://shadowfactory.us18.list-manage.com/subscribe/post\" method=\"POST\" novalidate=\"\">
-                        <h6 class=\"label_form black\">Email</h6>
+                        <h6 class=\"label_form white\">Email</h6>
                         <input class=\"input-form\" type=\"email\" name=\"EMAIL\" id=\"\" value=\"\" autocapitalize=\"off\" autocorrect=\"off\">
-                        <h6 class=\"label_form black\">Name</h6>
+                        <h6 class=\"label_form white\">Name</h6>
                         <input class=\"input-form\" type=\"text\" name=\"NAME\" id=\"\" value=\"\">
-                        <h6 class=\"label-form black\">Message</h6>
+                        <h6 class=\"label-form white\">Message</h6>
                         <textarea class=\"input-form\" type=\"text\" name=\"MESSAGE\" id=\"\" row=\"4\"></textarea>
 
                         <input id=\"submit-footer-form\" type=\"submit\" value=\"submit\" name=\"subscribe\" class=\"button-factory button-yellow\">
@@ -584,18 +785,37 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
                 <div class=\"right-section\">
                 
                     <div class=\"socials\">
-                        <a href=\"#\" target=\"_blank\" class=\"fab fa-facebook-f\"></a>
-                        <a href=\"#\" target=\"_blank\" class=\"fab fa-twitter\"></a>
-                        <a href=\"#\" target=\"_blank\" class=\"fab fa-linkedin-in\"></a>
-                        <a href=\"#\" target=\"_blank\" class=\"fab fa-instagram\"></a>
-                        <a href=\"#\" target=\"_blank\" class=\"fas fa-envelope\"></a>
+                        <a href=\"#\" target=\"_blank\" class=\"fab fa-facebook-f\">
+                            <svg aria-hidden=\"true\" data-prefix=\"fab\" data-icon=\"twitter\" class=\"svg-inline--fa fa-twitter fa-w-16 \" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><path fill=\"currentColor\" d=\"M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z\"></path></svg>
+                        </a>
+                        <a href=\"#\" target=\"_blank\" class=\"fab fa-twitter\">
+                            <svg aria-hidden=\"true\" data-prefix=\"fab\" data-icon=\"facebook-f\" class=\"svg-inline--fa fa-facebook-f fa-w-9 \" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 264 512\"><path fill=\"currentColor\" d=\"M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229\"></path></svg>
+                        </a>
+                        <a href=\"#\" target=\"_blank\" class=\"fab fa-linkedin-in\">
+                           <svg aria-hidden=\"true\" data-prefix=\"fab\" data-icon=\"instagram\" class=\"svg-inline--fa fa-instagram fa-w-14 \" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><path fill=\"currentColor\" d=\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z\"></path></svg>
+                        </a>
+                        <a href=\"#\" target=\"_blank\" class=\"fab fa-instagram\">
+                            <svg aria-hidden=\"true\" data-prefix=\"fab\" data-icon=\"linkedin-in\" class=\"svg-inline--fa fa-linkedin-in fa-w-14 \" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><path fill=\"currentColor\" d=\"M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z\"></path></svg>
+
+                        </a>
+               
                     </div>
 
-                    <p>Where to find us</p>
-                    <p>Where to find us</p>
-                    <button data-toggle=\"modal\" data-target=\"#modal-privaci-policy\">Privacy Policy</button>
+                    <div class=\"rights-reserved-section\">
+                        <p>@ 2009 Shadow Factory</p>
+                        <p>All Rights Reserved.</p>
+                    </div>
 
-             
+                
+
+                    <button id=\"btn-privacy-policy\" data-toggle=\"modal\" data-target=\"#modal-privacy-policy\">
+                        <div id=\"icon-arrow\">
+                            <svg aria-hidden=\"true\" data-prefix=\"fas\" data-icon=\"chevron-right\" class=\"svg-inline--fa fa-chevron-right fa-w-10 textYellow\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 512\"><path fill=\"currentColor\" d=\"M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z\"></path>
+                            </svg>
+                        </div>
+                        <p>Privacy Policy</p>
+                    </button>
+
                 </div>
 
             </div>
@@ -603,7 +823,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
         </div>
 
                <!-- Modal -->
-                    <div class=\"modal fade\" id=\"modal-privaci-policy\" role=\"dialog\">
+                    <div class=\"modal fade\" id=\"modal-privacy-policy\" role=\"dialog\">
                         <div class=\"modal-dialog modal-privacy-policy-dialog\">
                             
                           <!-- Modal content-->
@@ -638,7 +858,7 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
     \$(document).ready(function() {
   
-       \$( \".footer-title\" ).click(function() {
+        \$( \".footer-title\" ).click(function() {
             var footer = \$('#footer');
             // console.log(footer); 
             var height_footer = footer.height();
@@ -678,25 +898,69 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
       
 
          
-       });
+        });
+
+
+        function getArrayRowCol(class_name){
+           
+            var array_row_col = [];
+    
+            let arr_len = \$(\".grid-blog-content .grid-item\").length;
+
+            for(let i = 0; i < arr_len; i++){
+                let str = \$(\$(\".grid-blog-content .grid-item\")[i]).attr(\"class\");
+      
+                if(str){
+                    // console.log(\"wtfffffffffffffff\");
+                    // console.log(str);
+                    // console.log(class_name);
+                    // console.log(str.search(class_name));
+
+                    if(str.search(class_name)!=-1){
+                        let index_str_row = str.search(\"row\");
+                        let index_str_col = str.search(\"col\");
+
+                        let num_row = str[index_str_row+3];
+                        let num_col = str[index_str_col+3];
+
+                        let point = {
+                            cow: num_col,
+                            row: num_row,
+                        };
+
+                        array_row_col.push(point);
+                    }
+                  
+                }
+      
+            }
+
+            return array_row_col;
+
+            // console.log(\"hello\");
+            // console.log(array_row_col);
+        }
 
         \$('.ul-filter-gallery li').click(function(e) { 
-            // alert(\"wtf\");
+           
             // Process select catagory
             var select_class = \$(this).text().toLowerCase().split(\" \")[0];
 
-            \$(\".grid-our-work  .grid-item\").each(function( index ) {
+            \$(\".grid-blog-content .grid-item\").each(function( index ) {
 
                 var class_tag = \$(this).attr('class').toLowerCase().split(\" \");
                 class_tag = class_tag[class_tag.length-1]
-                console.log(class_tag);
+                // console.log(class_tag);
               if(class_tag == select_class || select_class == \"all\"){
 
+              
                 \$(this).fadeIn(\"slow\");
                 \$(this).show();
 
               }else{
 
+
+                // test(select_class);
                 \$(this).fadeIn(\"slow\");
                 \$(this).hide();
 
@@ -717,10 +981,148 @@ class __TwigTemplate_89e6fb2b6a68418976369808f5d3537c8007b7fa1f758a8de800cb0f85a
 
             });
 
-
+            test(select_class);
         });
 
-   
+        \$.fn.swapWith = function(that) {
+          var \$this = this;
+          var \$that = \$(that);
+
+          // create temporary placeholder
+          var \$temp = \$(\"<div>\");
+
+          // 3-step swap
+          \$this.before(\$temp);
+          \$that.before(\$this);
+          \$temp.after(\$that).remove();
+
+          return \$this;
+        }
+
+
+
+        var count = 0;
+        // var arr_len = \$(\".grid-blog-content .grid-item\").length;
+        // console.log(\"arr_len\");
+        // console.log(arr_len);
+
+         // \$(\".grid-blog-content .grid-item\")[0].replaceWith( \$(\".grid-blog-content .grid-item\")[1] );
+
+        function test(select_class){
+
+            if(select_class == \"all\"){
+                select_class = \"\";
+            }else{
+                select_class = \".\"+select_class;
+            }
+
+             var arr_len = \$(\".grid-blog-content .grid-item\"+select_class).length;
+            \$(\".grid-blog-content .grid-item.design\").each(function( index ) {
+                console.log();
+                console.log(this);
+                // let str = \$(\$(\".grid-blog-content .grid-item\")[index]).attr(\"class\");
+
+                // console.log(\"test function\");
+                // console.log(str);
+                // console.log(str.search(select_class));
+
+                // if(str.search(select_class) != -1){
+
+                    let count = 0;
+                    let j_index;
+           
+                    for(let i = index; i < arr_len; i++){
+                        if(count == 4){
+                            j_index = i - 1;
+                            // console.log('j index  = 4');
+                            // console.log(index);
+                            // console.log(j_index);
+
+                            // getArrayRowCol(select_class);
+                            break;
+                        }else{
+
+                            let row_col = getRowCol(i,select_class);
+                            let tmp = count + parseInt(row_col[0]);
+                            let count_before = count;
+
+                            if(tmp>4){
+                                tmp = count_before;
+                            }
+                            count += parseInt(row_col[0]);
+
+                            if(count > 4){
+                                count = 0;
+                                j_index = i;
+
+                                
+                                for(let z = j_index; z < arr_len; z++){
+                                    // console.log(\"z\")
+                                    // console.log(z);
+                                    // console.log(arr_len);
+                                    if(z != arr_len){
+                                        let row_col = getRowCol(z,select_class);
+                                        if(count_before + parseInt(row_col[0]) == 4){
+                                            // console.log(\"change j_index z\");
+                                            // console.log(j_index);
+                                            // console.log(z);
+
+                                            // console.log(\$(\".grid-blog-content .grid-item\")[j_index]);
+                                            // console.log(\$(\".grid-blog-content .grid-item\")[z]);
+                                            \$(\$(\".grid-blog-content .grid-item\"+select_class)[j_index]).swapWith(\$(\".grid-blog-content .grid-item\"+select_class)[z]);
+                 
+                                            break;
+                                        } 
+                                    }
+
+                                    if(z == arr_len-1){
+                                        \$(\$(\".grid-blog-content .grid-item\"+select_class)[z]).swapWith(\$(\".grid-blog-content .grid-item\"+select_class)[z-1]);
+                                    }
+                                  
+                                } 
+                            
+                                // console.log(\"j_index > 4\");
+                                // console.log(index);
+                                // console.log( j_index);
+
+                                break;
+                            }else{
+                              
+                                
+                            }
+                        }
+                    }
+                    // console.log(num_row);
+                    // console.log(num_col);
+               
+
+                // }
+            });
+
+        }
+
+        function getRowCol(index, select_class){
+            // console.log(\"getRowCol\");
+            // console.log(index);
+            let str = \$(\$(\".grid-blog-content .grid-item\"+select_class)[index]).attr(\"class\");
+            // console.log(str);
+
+            if(str){
+                let index_str_row = str.search(\"row\");
+                let index_str_col = str.search(\"col\");
+
+                let num_row = str[index_str_row+3];
+                let num_col = str[index_str_col+3];
+
+                  return [num_col, num_row];
+            }else{
+                return false;
+            }
+      
+
+          
+        }
+
 
     });
 </script>

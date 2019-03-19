@@ -95,8 +95,6 @@ html{
 
 }
 
-
-
 .left-section{
 	width: 76%;
 	float: left;
@@ -105,6 +103,7 @@ html{
 .right-section{
 	float: left;
 	width: 23%;
+	margin-top: 5%;
 }
  
 .right-section button{
@@ -208,7 +207,7 @@ html{
 }
 
 .grid-our-work {
-  /*background: #EEE;*/
+ 
   width: 100%;
   grid-gap: 19px 19px;
   display: grid; 
