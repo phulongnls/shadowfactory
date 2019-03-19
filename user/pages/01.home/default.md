@@ -3,40 +3,140 @@ title: Home
 body_classes: title-center title-h1h2
 ---
 
-# Say Hello to Grav!
-## installation successful...
+<div id="content-home">
+	<!-- /shadowfactory/user/themes/quark/assets/nav_background.mp4 -->
+	<!-- /shadowfactory/user/themes/quark/images/home/our-work-1.png -->
+	<div class="video_background">
+        <video autoplay="true" controls="" loop="" src="/shadowfactory/user/themes/quark/assets/nav_background.mp4"></video>
+    </div>
 
-Congratulations! You have installed the **Base Grav Package** that provides a **simple page** and the default **Quark** theme to get you started.
+	<div class="our-work-section black-background">
+		
+		<div class="title-our-work blue">
+			<h4>Our Work</h4>
+		</div>
+		
 
-!! If you see a **404 Error** when you click `Typography` in the menu, please refer to the [troubleshooting guide](http://learn.getgrav.org/troubleshooting/page-not-found).
+		<div class="grid-our-work">
+			<div class="grid-item row1 col2">
+				<img src="/shadowfactory/user/themes/quark/images/home/our-work-1.png">
+				<a class="gall-overlay white">
+					<h3>Stupid Cupid</h3>
+				</a>
 
-### Find out all about Grav
+			</div>
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/home/our-work-2.png">
+				<a class="gall-overlay white">
+					<h3>Stupid Cupid</h3>
+				</a>
+			</div>
+			<div class="grid-item row2 col1">
+				<img src="/shadowfactory/user/themes/quark/images/home/our-work-3.png">
+				<a class="gall-overlay white">
+					<h3>Stupid Cupid</h3>
+				</a>
+			</div>
+			<div class="grid-item row2 col1">
+				<img src="/shadowfactory/user/themes/quark/images/home/our-work-4.png">
+				<a class="gall-overlay white">
+					<h3>Stupid Cupid</h3>
+				</a>
+			</div>
+			<div class="grid-item row2 col2">
+				<img src="/shadowfactory/user/themes/quark/images/home/our-work-5.png">
+				<a class="gall-overlay white">
+					<h3>Stupid Cupid</h3>
+				</a>
+			</div>
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/home/our-work-6.png">
+				<a class="gall-overlay white">
+					<h3>Stupid Cupid</h3>
+				</a>
+			</div>
 
-* Learn about **Grav** by checking out our dedicated [Learn Grav](http://learn.getgrav.org) site.
-* Download **plugins**, **themes**, as well as other Grav **skeleton** packages from the [Grav Downloads](http://getgrav.org/downloads) page.
-* Check out our [Grav Development Blog](http://getgrav.org/blog) to find out the latest goings on in the Grav-verse.
+		</div>
+	</div>
 
-!!! If you want a more **full-featured** base install, you should check out [**Skeleton** packages available in the downloads](http://getgrav.org/downloads).
+	<div class="clients-partners-section black-background">
+		<div class="title-clients-partners blue">
+			<h4>Clients &amp; Partners</h4>
+		</div>
+		
+		<div class="grid-clients-partners">
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/1.png">
+			</div>
 
-### Edit this Page
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/2.png">
+			</div>
 
-To edit this page, simply navigate to the folder you installed **Grav** into, and then browse to the `user/pages/01.home` folder and open the `default.md` file in your [editor of choice](http://learn.getgrav.org/basics/requirements).  You will see the content of this page in [Markdown format](http://learn.getgrav.org/content/markdown).
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/3.png">
+			</div>
 
-### Create a New Page
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/4.png">
+			</div>
 
-Creating a new page is a simple affair in **Grav**.  Simply follow these simple steps:
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/5.png">
+			</div>
 
-1. Navigate to your pages folder: `user/pages/` and create a new folder.  In this example, we will use [explicit default ordering](http://learn.getgrav.org/content/content-pages) and call the folder `02.mypage`.
-2. Launch your text editor and paste in the following sample code:
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/6.png">
+			</div>
 
-        ---
-        title: My New Page
-        ---
-        # My New Page!
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/7.png">
+			</div>
 
-        This is the body of **my new page** and I can easily use _Markdown_ syntax here.
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/8.png">
+			</div>
 
-3. Save this file in the `user/pages/02.mypage/` folder as `default.md`. This will tell **Grav** to render the page using the **default** template.
-4. That is it! Reload your browser to see your new page in the menu.
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/9.png">
+			</div>
 
-! NOTE: The page will automatically show up in the Menu after the "Home" menu item. If you wish to change the name that shows up in the Menu, simple add: `menu: My Page` between the dashes in the page content. This is called the YAML front matter, and it is where you configure page-specific options.
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/10.png">
+			</div>
+
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/11.png">
+			</div>
+
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/12.png">
+			</div>
+
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/13.png">
+			</div>
+
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/14.png">
+			</div>
+
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/15.png">
+			</div>
+
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/16.png">
+			</div>
+
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/17.png">
+			</div>
+
+			<div class="grid-item row1 col1">
+				<img src="/shadowfactory/user/themes/quark/images/clients/18.png">
+			</div>
+
+		</div>
+	</div>
+</div>

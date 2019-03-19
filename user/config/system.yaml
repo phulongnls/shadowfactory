@@ -6,10 +6,11 @@ home:
 pages:
   theme: quark
   markdown:
-    extra: false
+    extra: true
+
   process:
     markdown: true
-    twig: false
+    twig: true
 
 cache:
   enabled: true
@@ -43,3 +44,5 @@ debugger:
 gpm:
   releases: stable
   verify_peer: true
+
+

@@ -22,6 +22,8 @@
         {% do assets.addCss('theme://css-compiled/theme'~compress) %}
         {% do assets.addCss('theme://css/custom.css') %}
         {% do assets.addCss('theme://css/line-awesome.min.css') %}
+
+         {% do assets.addCss('theme://css/hello.css') %}
     {% endblock %}
     {{ assets.css()|raw }}
 
