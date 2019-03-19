@@ -2,6 +2,13 @@ html {
   height: 100%;
 }
 
+@include font-face('Gotham Medium', '../fonts/GothamMedium_1', null, null, woff);
+@include font-face('Gotham Bold', '../fonts/GothamBold', null, null, woff);
+@include font-face('Gotham Thin', '../fonts/Gotham-Thin', null, null, woff);
+@include font-face('Gotham Light', '../fonts/GothamLight', null, null, woff);
+@include font-face('Gotham Narrow Book', '../fonts/Gotham_Narrow_Book', null, null, otf);
+@include font-face('Gotham Regular', '../fonts/Gotham_Regular', null, null, otf);
+
 #body-wrapper {
   .container {
     padding: $vert-padding;

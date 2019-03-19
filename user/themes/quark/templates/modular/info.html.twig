@@ -1,0 +1,10 @@
+{% set grid_size = theme_var('grid-size') %}
+{% set info_title = page.header.info_title %}
+{% set info_client = page.header.info_client %}
+{% set info_type = page.header.info_type %}
+{% set info_completion = page.header.info_completion %}
+{% set info_description = page.header.info_description %}
+{% set info_image = page.media[page.header.info_image] %}
+{% set info_media = page.media[page.header.info_media] %}
+
+{% include 'partials/info.html.twig' %}
