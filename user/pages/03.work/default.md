@@ -5,14 +5,12 @@ process:
     markdown: true
     twig: true
 twig_first: true
-template: work
 content:
     items: '@self.children'
     order:
         by: folder
         dir: asc
 ---
-
 
 {% set video = page.media.videos|first %}
 <div class="outer-grid banner-page work">
