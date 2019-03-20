@@ -397,16 +397,18 @@ title: Blog
                 </div>
 
                 <!-- ///////////////////////////// -->
-                <!-- <div class="grid-item row1 col1 graphic">
-                    <div class="tag_news">
+    <!--             <div class="grid-item row3 col1 graphic">
+                    <div class="tag_news white">
                         <h6>news</h6>
 
                     </div>
 
+                   
+
                     <div class="gall-overlay">
                         <img src="/shadowfactory/user/themes/quark/images/home/our-work-1.png">
                         <div class="overlay-text white">
-                            <h4>Shadow Factory at WeBit Festival 2018</h4>
+                            <h5>Shadow Factory at WeBit Festival 2018</h5>
                             <p>25/07/2018</p>
 
                             <div class="blog-info">
@@ -417,8 +419,8 @@ title: Blog
                     </div>
                 </div>
 
-                <div class="grid-item row2 col1 graphic">
-                    <div class="tag_news">
+                <div class="grid-item row1 col2 graphic">
+                    <div class="tag_news white">
                         <h6>news</h6>
 
                     </div>
@@ -426,7 +428,7 @@ title: Blog
                     <div class="gall-overlay">
                         <img src="/shadowfactory/user/themes/quark/images/home/our-work-1.png">
                         <div class="overlay-text white">
-                            <h4>Shadow Factory at WeBit Festival 2018</h4>
+                            <h5>Shadow Factory at WeBit Festival 2018</h5>
                             <p>25/07/2018</p>
 
                             <div class="blog-info">
@@ -438,7 +440,7 @@ title: Blog
                 </div>
 
                 <div class="grid-item row1 col1 graphic">
-                    <div class="tag_news">
+                    <div class="tag_news white">
                         <h6>news</h6>
 
                     </div>
@@ -446,7 +448,7 @@ title: Blog
                     <div class="gall-overlay">
                         <img src="/shadowfactory/user/themes/quark/images/home/our-work-1.png">
                         <div class="overlay-text white">
-                            <h4>Shadow Factory at WeBit Festival 2018</h4>
+                            <h5>Shadow Factory at WeBit Festival 2018</h5>
                             <p>25/07/2018</p>
 
                             <div class="blog-info">
@@ -457,8 +459,8 @@ title: Blog
                     </div>
                 </div>
 
-                <div class="grid-item row2 col2 graphic">
-                    <div class="tag_news">
+                <div class="grid-item row1 col1 graphic">
+                    <div class="tag_news white">
                         <h6>news</h6>
 
                     </div>
@@ -466,7 +468,68 @@ title: Blog
                     <div class="gall-overlay">
                         <img src="/shadowfactory/user/themes/quark/images/home/our-work-1.png">
                         <div class="overlay-text white">
-                            <h4>Shadow Factory at WeBit Festival 2018</h4>
+                            <h5>Shadow Factory at WeBit Festival 2018</h5>
+                            <p>25/07/2018</p>
+
+                            <div class="blog-info">
+                                <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="grid-item row1 col2 graphic">
+                    <div class="tag_news white">
+                        <h6>news</h6>
+
+                    </div>
+
+                    <div class="gall-overlay">
+                        <img src="/shadowfactory/user/themes/quark/images/home/our-work-1.png">
+                        <div class="overlay-text white">
+                            <h5>Shadow Factory at WeBit Festival 2018</h5>
+                            <p>25/07/2018</p>
+
+                            <div class="blog-info">
+                                <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="grid-item row2 col1 graphic">
+                    <div class="tag_news white">
+                        <h6>news</h6>
+
+                    </div>
+
+                    <div class="gall-overlay">
+                        <img src="/shadowfactory/user/themes/quark/images/home/our-work-1.png">
+                        <div class="overlay-text white">
+                            <h5>Shadow Factory at WeBit Festival 2018</h5>
+                            <p>25/07/2018</p>
+
+                            <div class="blog-info">
+                                <p>Amit Chatterjee, Shadow Factory founding partner was recently a keynote speaker at the Interational Webit Festival in Sofia, Bulgaria.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="grid-item row1 col1 graphic">
+                    <div class="tag_news white">
+                        <h6>news</h6>
+
+                    </div>
+
+                    <div class="gall-overlay">
+                        <img src="/shadowfactory/user/themes/quark/images/home/our-work-1.png">
+                        <div class="overlay-text white">
+                            <h5>Shadow Factory at WeBit Festival 2018</h5>
                             <p>25/07/2018</p>
 
                             <div class="blog-info">
@@ -476,7 +539,6 @@ title: Blog
 
                     </div>
                 </div> -->
-
             </div>
 
 

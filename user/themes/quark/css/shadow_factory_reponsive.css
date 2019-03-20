@@ -1,4 +1,15 @@
 /*640 and less, 768, 969, 1024, 1200+*/
+@media screen and (max-width: 1200px){
+	/*.content-container-footer{
+		height: 300px;
+	}*/
+
+	.content-footer{
+		padding-top: 150px;
+	}
+}
+
+
 @media screen and (max-width: 1024px){
 	.our-work-section{
 		background-color: red;

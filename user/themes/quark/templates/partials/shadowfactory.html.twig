@@ -55,8 +55,10 @@
             <div class="navigation">
         
                 <div class="logo">
-                   
-                    <img src="{{ url('theme://assets/afereri.jpg') }}" alt="Smiley face" height="47.72" width="133.18">
+                    <a href="/shadowfactory" class="active">
+                        <img src="{{ url('theme://assets/afereri.jpg') }}" alt="Smiley face" height="47.72" width="133.18">
+                    </a>
+                    
                 </div>
 
                 <div class="desktop-menu">
@@ -197,6 +199,7 @@
   
         $( ".footer-title" ).click(function() {
             var footer = $('#footer');
+            var targetOffset = footer.offset().top;
             // console.log(footer); 
             var height_footer = footer.height();
             console.log(height_footer);
@@ -213,23 +216,41 @@
                     'transform' :  'rotate(-270deg)',
                 });
 
-            }else{
-             // footer.animate({
-             //    height: 1003
-             //  }, 500, "linear", function() {
-             //    // Animation complete.
-             //    var targetOffset = footer.offset().top;
-                 
-             //  });
-             //   $(".footer-title span").toggleClass('glyphicon-plus glyphicon-minus');
-             //       $(".footer-title span").css({
-             //    'transform' :  'rotate(180deg)',
-             // });
+
              
+
+            $('html, body').animate({scrollTop: targetOffset}, 500, "linear",function(){
+                   $(".content-container-footer").css({
+                    // 'overflow': 'hidden',
+                    'height' : '251px',
+                });
+            });
+
+
+            }else{
+             footer.animate({
+                height: 1003
+              }, 500, "linear", function() {
+                // Animation complete.
+                var targetOffset = footer.offset().top;
+                 
+              });
+                $(".footer-title span").toggleClass('glyphicon-plus glyphicon-minus');
+                $(".footer-title span").css({
+                    'transform' :  'rotate(180deg)',
+                });
+
+             
+
+                $(".content-container-footer").css({
+                    'height' : '1003px',
+                });
+
+                     
+             $('html, body').animate({scrollTop: targetOffset}, 500);
             } 
 
-            var targetOffset = footer.offset().top;
-            // $('html, body').animate({scrollTop: targetOffset}, 500);
+    
 
          
       
