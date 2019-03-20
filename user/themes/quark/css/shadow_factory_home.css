@@ -48,7 +48,7 @@ html{
 	display: grid; 
 	grid-template-columns: [viewport-start] minmax(0,1fr) [container-start] minmax(100px,1200px) [container-end] minmax(0,1fr) [viewport-end];
 	    /*grid-auto-rows: auto;*/
-	/*overflow: hidden; */
+	overflow: hidden; 
 
 }
 
@@ -69,21 +69,21 @@ html{
 }
 
 .content-container-footer{
+	height: 251px;
 	grid-column: 2;
+	overflow: hidden;
 }
 
 .footer-title{
-	/*width: 100%;
-	overflow: auto;
+	width: 100%;
+	/*overflow: auto;*/
 	cursor: pointer;
-	padding-top: 6.3%;*/
+	padding-top: 5%;
 
 }
 
 .content-footer{
 	
-	overflow: auto;
-    margin-top: 3.2%;
     width: 100%;
 }
 
@@ -102,10 +102,10 @@ html{
 }
 
 .icon-colour{
-	  color: #ffcc04;
-
-     font-size: 50px;
-     margin-top: 5%;
+	color: #ffcc04;
+	z-index: 5;
+    font-size: 50px;
+    margin-top: 5%;
     margin-left: 10%;
 
 }
@@ -231,7 +231,7 @@ html{
 .grid-our-work img{
 	height: 100%;
     width: 100%;
-    background: rgba(0,0,0,.65);
+    /*background: rgba(0,0,0,.65);*/
     transition: all .8s ease-in-out;
  
 }
@@ -270,6 +270,7 @@ html{
 	display: flex;
 	align-items: flex-end;
 }
+
 
 .grid-our-work .row1{grid-row-end: span 1;}
 .grid-our-work .row2{grid-row-end: span 2;}

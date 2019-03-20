@@ -1,13 +1,16 @@
 ---
 title: Home
 body_classes: 'title-center title-h1h2'
+child_type: default
+visible: false
+
 ---
 
 <div id="content-home">
 	<!-- /shadowfactory/user/themes/quark/assets/nav_background.mp4 -->
 	<!-- /shadowfactory/user/themes/quark/images/home/our-work-1.png -->
 	<div class="video_background">
-        <video autoplay="true" controls="" loop="" src="/shadowfactory/user/themes/quark/assets/nav_background.mp4"></video>
+        <video autoplay="true" loop="true" src="/shadowfactory/user/themes/quark/assets/nav_background.mp4"></video>
     </div>
 
 	<div class="our-work-section black-background">
