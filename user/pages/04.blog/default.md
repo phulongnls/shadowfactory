@@ -1,6 +1,7 @@
 ---
 title: Blog
 ---
+
 <div id="content-blog">
     <div class="slideshow">
         <div class="text-section">

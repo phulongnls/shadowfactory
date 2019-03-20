@@ -2,24 +2,6 @@ body {
 	margin: 0;
 	background: #010101;
 }
-.col1 {
-	width: calc(25% - 12px);
-}
-.col2 {
-	width: calc(50% - 12px);
-}
-.col3 {
-	width: calc(75% - 12px);
-}
-.col4 {
-	width: 100%;
-}
-.row1 {
-	height: 350px;
-}
-.row2 {
-	height: 712px;
-}
 .outer-grid {
 	display: grid;
 	grid-template-columns: [viewport-start] minmax(0,1fr) [container-start] minmax(100px,1600px) [container-end] minmax(0,1fr) [viewport-end];
@@ -27,9 +9,11 @@ body {
 .banner-page {
 	&.work {
 		height: 70vh;
+		.full {
+			height: 70vh;
+		}
 	}
 	.full {
-		height: 70vh;
 		width: 100%;
 		overflow: hidden;
 		background: #1d1d1d;
@@ -79,6 +63,24 @@ body {
 	}
 	.grid-item {
 		display: flex;
+		.col1 {
+			width: calc(25% - 12px);
+		}
+		.col2 {
+			width: calc(50% - 12px);
+		}
+		.col3 {
+			width: calc(75% - 12px);
+		}
+		.col4 {
+			width: 100%;
+		}
+		.row1 {
+			height: 350px;
+		}
+		.row2 {
+			height: 712px;
+		}
 		.item {
 			display: flex;
 			overflow: hidden;
@@ -117,6 +119,9 @@ body {
 					line-height: 42px;
 					font-family: 'Gotham Thin';
 					font-weight: 700;
+					&:after {
+						display: none;
+					}
 				}
 			}
 			&:hover {

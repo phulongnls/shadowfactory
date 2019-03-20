@@ -12,7 +12,6 @@ process:
     markdown: true
     twig: true
 twig_first: true
-template: work-detail
 content:
     items: '@self.modular'
 ---

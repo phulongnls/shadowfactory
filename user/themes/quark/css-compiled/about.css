@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Gotham Medium";
+  src: url("../fonts/GothamMedium_1.woff") format("woff"); }
+@font-face {
+  font-family: "Gotham Bold";
+  src: url("../fonts/GothamBold.woff") format("woff"); }
+@font-face {
+  font-family: "Gotham Thin";
+  src: url("../fonts/Gotham-Thin.woff") format("woff"); }
+@font-face {
+  font-family: "Gotham Light";
+  src: url("../fonts/GothamLight.woff") format("woff"); }
+@font-face {
+  font-family: "Gotham Narrow Book";
+  src: url("../fonts/Gotham_Narrow_Book.otf") format("opentype"); }
+@font-face {
+  font-family: "Gotham Regular";
+  src: url("../fonts/Gotham_Regular.otf") format("opentype"); }
 body {
   background-color: #010101; }
 

@@ -1,3 +1,55 @@
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@include font-face('Gotham Medium', '../fonts/GothamMedium_1', null, null, woff);
+@include font-face('Gotham Bold', '../fonts/GothamBold', null, null, woff);
+@include font-face('Gotham Thin', '../fonts/Gotham-Thin', null, null, woff);
+@include font-face('Gotham Light', '../fonts/GothamLight', null, null, woff);
+@include font-face('Gotham Narrow Book', '../fonts/Gotham_Narrow_Book', null, null, otf);
+@include font-face('Gotham Regular', '../fonts/Gotham_Regular', null, null, otf);
+
 body {
 	background-color: #010101;
 }
