@@ -1,0 +1,17 @@
+
+{% if slider_images %}
+<div class="container">
+	<div class="work-slider">
+		<div class="owl-carousel">
+		{% set count = 0 %}
+		{% for slider_image in slider_images %}
+			{% set count = count + 1 %}
+			{% set image = page.media[slider_image['image']] %}
+			<img class="lazyOwl" data-src="{{ image.url }}" srcset="{{ image.url }} 1200w, {{ image.url }} 1024w, {{ image.url }} 969w, {{ image.url }} 768w, {{ image.url }} 640w, {{ image.url }} 480w, {{ image.url }} 320w" data-sizes="auto" alt="{{ page.parent.title }} Carousel Item {{ count }}">
+		{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+{% endif %}

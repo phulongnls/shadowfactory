@@ -1,0 +1,27 @@
+
+<div class="outer-grid banner-page work">
+	<div class="full">
+		<div class="bg">
+			{% if banner_image %}
+				<img class="lazy" src="{{ banner_image.url }}" srcset="{{ banner_image.url }} 1200w, {{ banner_image.url }} 1024w, {{ banner_image.url }} 969w, {{ banner_image.url }} 768w, {{ banner_image.url }} 640w, {{ banner_image.url }} 480w, {{ banner_image.url }} 320w" sizes="auto" alt="{{ page.parent.title }}">
+			{% endif %}
+		</div>
+		<div class="banner-overlay">
+			{% if page.parent.title %}
+				<h1>{{ page.parent.title }}</h1>
+			{% endif %}
+			{% if banner_description %}
+				<p>{{ banner_description }}</p>
+			{% endif %}
+			{% if page.parent.taxonomy['work'][0] %}
+				<a href="{{ page.parent.parent.url }}">{{ page.parent.taxonomy['work'][0] }}</a>
+			{% endif %}
+		</div>
+		<div class="banner-scroll">
+			<p>SCROLL</p>
+			<div class="scroll-line">
+				<div class="vertical-line"></div>
+			</div>
+		</div>
+	</div>
+</div>

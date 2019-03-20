@@ -271,6 +271,12 @@ html{
 	align-items: flex-end;
 }
 
+
+.grid-our-work .row1{grid-row-end: span 1;}
+.grid-our-work .row2{grid-row-end: span 2;}
+.grid-our-work .col1{grid-column-end: span 1;}
+.grid-our-work .col2{grid-column-end: span 2;}
+
 .title-our-work{
 	margin-top: 2.4%;
 	margin-bottom: 5.7%;

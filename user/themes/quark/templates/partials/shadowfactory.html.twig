@@ -30,10 +30,15 @@
   
     {% block stylesheets %}
    
+
         {% do assets.addCss('theme://css/shadow_factory_home.css') %}
         {% do assets.addCss('theme://css/shadow_factory_blog.css') %}
         {% do assets.addCss('theme://css/shadow_factory_general.css') %}
         {% do assets.addCss('theme://css/shadow_factory_reponsive.css') %}
+
+        {% do assets.addCss('theme://css-compiled/about.css') %}
+        {% do assets.addCss('theme://css-compiled/work.css') %}
+        
     {% endblock %}
     {{ assets.css()|raw }}
 
@@ -43,6 +48,10 @@
         {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
     {% endblock %}
     {{ assets.js()|raw }}
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
 
 {% endblock head %}
 </head>
@@ -480,6 +489,44 @@
 
           
         }
+
+
+        $('.lazy').Lazy();
+    var $grid = $('.list-works .grid-item').isotope({
+            itemSelector: '.item',
+            layoutMode: 'masonry',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.grid-sizer',
+                gutter: 12
+            }
+    });
+
+    $('.list-works .filter').on( 'click', 'button', function() {
+        if (!$(this).hasClass('active')) {
+            $('.list-works .filter button').removeClass('active');
+            $(this).addClass('active');
+            var filterValue = $( this ).attr('data-filter');
+            if (filterValue == '*') {
+                $('.list-works .grid-item .item').each(function(e) {
+                    var classAll = $(this).data('all');
+                    var classType = $(this).data('type');
+                    $(this).removeClass(classType);
+                    $(this).addClass(classAll);
+                });
+            } else {
+                $('.list-works .grid-item .item').each(function(e) {
+                    var classAll = $(this).data('all');
+                    var classType = $(this).data('type');
+                    $(this).removeClass(classAll);
+                    $(this).addClass(classType);
+                });
+            }
+            $grid.imagesLoaded().progress( function() {
+                $grid.isotope({ filter: filterValue });
+            });
+        }
+    });
 
 
     });

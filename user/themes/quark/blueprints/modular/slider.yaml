@@ -1,0 +1,22 @@
+title: 'Work Slider'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        buttons:
+          type: tab
+          title: 'Work Slider'
+          fields:
+            header.images:
+              type: list
+              label: Images
+              markdown: true
+              fields:
+                .image:
+                  type: filepicker
+                  label: Image
+                  markdown: true
+
+

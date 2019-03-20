@@ -1,0 +1,22 @@
+title: Banner
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        buttons:
+          type: tab
+          title: Banner
+          fields:
+            header.banner_description:
+              type: text
+              label: Description
+              markdown: true
+            header.banner_image:
+              type: filepicker
+              label: Banner Image
+              preview_images: true
+              description: 'If not specified, this defaults to the first image found in the page''s folder'
+
+

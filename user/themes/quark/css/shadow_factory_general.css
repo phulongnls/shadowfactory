@@ -47,6 +47,10 @@ p{
 	font-weight: normal;
 }
 
+#body-wrapper {
+	overflow: auto;
+}
+
 .light-blue{
 	color: #C7EAFB;
 }

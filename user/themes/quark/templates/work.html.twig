@@ -1,0 +1,86 @@
+{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
+{% set grid_size = theme_var('grid-size') %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
+        {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
+        {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
+        {% do assets.addCss('theme://css-compiled/theme'~compress) %}
+        {% do assets.addCss('theme://css-compiled/theme.css') %}
+        {% do assets.addCss('theme://css-compiled/work.css') %}
+        {% do assets.addCss('theme://css/custom.css') %}
+        {% do assets.addCss('theme://css/line-awesome.min.css') %}
+    {% endblock %}
+    {{ assets.css()|raw }}
+
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 101) %}
+        {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+    {% endblock %}
+    {{ assets.js()|raw }}
+
+{% endblock head %}
+</head>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+
+
+{% block content %}
+    {{ page.content|raw }}
+{% endblock %}
+
+<script type="text/javascript">
+    $('.lazy').Lazy();
+    var $grid = $('.list-works .grid-item').isotope({
+            itemSelector: '.item',
+            layoutMode: 'masonry',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.grid-sizer',
+                gutter: 12
+            }
+    });
+
+    $('.list-works .filter').on( 'click', 'button', function() {
+        if (!$(this).hasClass('active')) {
+            $('.list-works .filter button').removeClass('active');
+            $(this).addClass('active');
+            var filterValue = $( this ).attr('data-filter');
+            if (filterValue == '*') {
+                $('.list-works .grid-item .item').each(function(e) {
+                    var classAll = $(this).data('all');
+                    var classType = $(this).data('type');
+                    $(this).removeClass(classType);
+                    $(this).addClass(classAll);
+                });
+            } else {
+                $('.list-works .grid-item .item').each(function(e) {
+                    var classAll = $(this).data('all');
+                    var classType = $(this).data('type');
+                    $(this).removeClass(classAll);
+                    $(this).addClass(classType);
+                });
+            }
+            $grid.imagesLoaded().progress( function() {
+                $grid.isotope({ filter: filterValue });
+            });
+        }
+    });
+</script>

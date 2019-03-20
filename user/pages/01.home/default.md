@@ -3,6 +3,7 @@ title: Home
 body_classes: 'title-center title-h1h2'
 child_type: default
 visible: false
+
 ---
 
 <div id="content-home">

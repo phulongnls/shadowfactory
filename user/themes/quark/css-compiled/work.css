@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  background: #010101; }
+
+.outer-grid {
+  display: grid;
+  grid-template-columns: [viewport-start] minmax(0, 1fr) [container-start] minmax(100px, 1600px) [container-end] minmax(0, 1fr) [viewport-end]; }
+
+.banner-page.work {
+  height: 70vh; }
+  .banner-page.work .full {
+    height: 70vh; }
+.banner-page .full {
+  width: 100%;
+  overflow: hidden;
+  background: #1d1d1d;
+  grid-column: viewport; }
+  .banner-page .full .bg {
+    grid-column: viewport;
+    height: 100vh; }
+    .banner-page .full .bg video {
+      width: 100%;
+      height: 100%;
+      object-position: 50% 50%;
+      object-fit: cover;
+      pointer-events: none; }
+
+.list-works {
+  grid-column: container;
+  display: grid;
+  margin-bottom: 95px; }
+  .list-works .filter {
+    padding-top: 60px;
+    padding-bottom: 110px; }
+    .list-works .filter button {
+      font-family: 'Gotham Narrow Book';
+      font-size: 25px;
+      line-height: 30px;
+      border: none;
+      outline: none;
+      color: #646464;
+      background: transparent;
+      padding: 0 25px;
+      cursor: pointer;
+      text-transform: uppercase; }
+      .list-works .filter button.active {
+        color: #FFCC04;
+        font-family: 'Gotham Regular'; }
+      .list-works .filter button:first-child {
+        padding-left: 0; }
+      .list-works .filter button:last-child {
+        padding-right: 0; }
+  .list-works .grid-item {
+    display: flex; }
+    .list-works .grid-item .col1 {
+      width: calc(25% - 12px); }
+    .list-works .grid-item .col2 {
+      width: calc(50% - 12px); }
+    .list-works .grid-item .col3 {
+      width: calc(75% - 12px); }
+    .list-works .grid-item .col4 {
+      width: 100%; }
+    .list-works .grid-item .row1 {
+      height: 350px; }
+    .list-works .grid-item .row2 {
+      height: 712px; }
+    .list-works .grid-item .item {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 12px; }
+      .list-works .grid-item .item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%; }
+      .list-works .grid-item .item.objBottom img {
+        object-position: bottom; }
+      .list-works .grid-item .item .title {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        margin: 0;
+        background: rgba(0, 0, 0, 0.4);
+        transition: all .8s ease-in-out; }
+        .list-works .grid-item .item .title a {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          justify-content: flex-start;
+          align-items: flex-end;
+          position: absolute;
+          padding: 12px;
+          top: 300px;
+          transition: all .25s ease-in;
+          text-decoration: none;
+          color: #F2F2F2;
+          font-size: 40px;
+          line-height: 42px;
+          font-family: 'Gotham Thin';
+          font-weight: 700; }
+          .list-works .grid-item .item .title a:after {
+            display: none; }
+      .list-works .grid-item .item:hover .title {
+        background: linear-gradient(transparent, transparent, black);
+        transition: all .8s ease-in-out; }
+      .list-works .grid-item .item:hover a {
+        top: 0;
+        transition: all .25s ease-out; }
+
+/*# sourceMappingURL=work.css.map */
